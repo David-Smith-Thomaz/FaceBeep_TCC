@@ -1,0 +1,32 @@
+﻿<div class="row">
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'photoPerfil' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.photoPerfil' name='photoPerfil' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'name' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.name' name='name' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'userId'}}</label>
+      <select class='form-control'  name='userId' [(ngModel)]='vm.modelFilter.userId' datasource [dataitem]="'User'" [fieldFilterName]="'Login'"></select>
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'groupParticipantId'}}</label>
+      <select class='form-control'  name='groupParticipantId' [(ngModel)]='vm.modelFilter.groupParticipantId' datasource [dataitem]="'GroupParticipant'" [fieldFilterName]="'GroupName'"></select>
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'documentNumber' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.documentNumber' name='documentNumber' />
+    </div>
+  </section>
+</div>

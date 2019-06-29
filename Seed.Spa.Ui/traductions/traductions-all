@@ -1,0 +1,403 @@
+pt-BR;Sample;SampleId;Sample
+pt-BR;Sample;Name;Name
+pt-BR;Sample;Descricao;Descricao
+pt-BR;Sample;SampleTypeId;Sample Type
+pt-BR;Sample;Ativo;Ativo
+pt-BR;Sample;Age;Age
+pt-BR;Sample;Category;Category
+pt-BR;Sample;Datetime;Datetime
+pt-BR;Sample;Tags;Tags
+pt-BR;SampleType;SampleTypeId;Sample Type
+pt-BR;SampleType;Name;Name
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;PhotoPerfil;Photo Perfil
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;StatusRegisterId;Status Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;PhotoPerfil;Photo Perfil
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;PhotoPerfil;Photo Perfil
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;PhotoPerfil;Photo Perfil
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;StatusRegisterId;Status Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;PhotoPerfil;Photo Perfil
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;StatusRegisterId;Status Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;StatusRegister;StatusRegisterId;Status Register
+pt-BR;StatusRegister;Description;Description
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;PhotoPerfil;Photo Perfil
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;StatusRegisterId;Status Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;StatusRegister;StatusRegisterId;Status Register
+pt-BR;StatusRegister;Description;Description
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;PhotoPerfil;Photo Perfil
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;StatusRegisterId;Status Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;StatusRegister;StatusRegisterId;Status Register
+pt-BR;StatusRegister;Description;Description
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;PhotoPerfil;Photo Perfil
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;StatusRegisterId;Status Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;StatusRegister;StatusRegisterId;Status Register
+pt-BR;StatusRegister;Description;Description

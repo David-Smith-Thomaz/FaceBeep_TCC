@@ -1,0 +1,33 @@
+﻿<div class="row " [formGroup]="vm.form">
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'login' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.login' name='login' required formControlName='login'    maxlength=50 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'password' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.password' name='password' required formControlName='password'    maxlength=150 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'statusUserId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'statusUserId' }}</label> 
+        <select class='form-control'  name='statusUserId' [(ngModel)]='vm.model.statusUserId' required formControlName='statusUserId' datasource [dataitem]="'StatusUser'" [fieldFilterName]="'Description'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'typeUserId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'typeUserId' }}</label> 
+        <select class='form-control'  name='typeUserId' [(ngModel)]='vm.model.typeUserId' required formControlName='typeUserId' datasource [dataitem]="'TypeUser'" [fieldFilterName]="'Description'"  ></select>
+      </div>
+        
+  </section>
+
+</div>
+

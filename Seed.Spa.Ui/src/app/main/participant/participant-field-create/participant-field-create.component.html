@@ -1,0 +1,47 @@
+﻿<div class="row " [formGroup]="vm.form">
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'photoPerfil' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.photoPerfil' name='photoPerfil'  formControlName='photoPerfil'    maxlength=150 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'name' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.name' name='name' required formControlName='name'    maxlength=50 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'description' }}</label>
+      <textarea class='form-control'  [(ngModel)]='vm.model.description' name='description'  rows='5' formControlName='description' ></textarea>
+    </div>
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'userId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'userId' }}</label> 
+        <select class='form-control'  name='userId' [(ngModel)]='vm.model.userId' required formControlName='userId' datasource [dataitem]="'User'" [fieldFilterName]="'Login'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'groupParticipantId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'groupParticipantId' }}</label> 
+        <select class='form-control'  name='groupParticipantId' [(ngModel)]='vm.model.groupParticipantId'  formControlName='groupParticipantId' datasource [dataitem]="'GroupParticipant'" [fieldFilterName]="'GroupName'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'documentNumber' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.documentNumber' name='documentNumber' required formControlName='documentNumber'  maski='9999999999'  autocomplete='off'/>
+    </div>
+  </section>
+
+</div>
+

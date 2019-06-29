@@ -1,0 +1,40 @@
+﻿<div class="row " [formGroup]="vm.form">
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'description' }}</label>
+      <textarea class='form-control'  [(ngModel)]='vm.model.description' name='description'  rows='5' formControlName='description' ></textarea>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'enterDate' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.enterDate' name='enterDate' required formControlName='enterDate' datetimepicker autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'exitDate' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.exitDate' name='exitDate' required formControlName='exitDate' datetimepicker autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'statusRegisterId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'statusRegisterId' }}</label> 
+        <select class='form-control'  name='statusRegisterId' [(ngModel)]='vm.model.statusRegisterId' required formControlName='statusRegisterId' datasource [dataitem]="'StatusRegister'" [fieldFilterName]="'Description'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'participantId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'participantId' }}</label> 
+        <select class='form-control'  name='participantId' [(ngModel)]='vm.model.participantId' required formControlName='participantId' datasource [dataitem]="'Participant'" [fieldFilterName]="'PhotoPerfil'"  ></select>
+      </div>
+        
+  </section>
+
+</div>
+

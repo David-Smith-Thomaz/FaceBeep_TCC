@@ -1,0 +1,30 @@
+﻿<dl>
+    <dt>{{ vm.infos | traduction: 'photoPerfil' }}:</dt>
+    <dd><bind-custom [model]="vm.details.photoPerfil" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'name' }}:</dt>
+    <dd><bind-custom [model]="vm.details.name" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'description' }}:</dt>
+    <dd><bind-custom [model]="vm.details.description" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'participantId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.participantId" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'userId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.userId" [format]="'instance'" [tag]="'span'"  [instance]="'User'"  [key]="'UserId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'groupParticipantId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.groupParticipantId" [format]="'instance'" [tag]="'span'"  [instance]="'GroupParticipant'"  [key]="'GroupParticipantId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'documentNumber' }}:</dt>
+    <dd><bind-custom [model]="vm.details.documentNumber" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+</dl> 

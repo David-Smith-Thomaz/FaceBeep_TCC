@@ -1,0 +1,22 @@
+﻿<dl>
+    <dt>{{ vm.infos | traduction: 'groupName' }}:</dt>
+    <dd><bind-custom [model]="vm.details.groupName" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'startDatePeriod' }}:</dt>
+    <dd><bind-custom [model]="vm.details.startDatePeriod" [format]="'DateTime'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'endDatePeriod' }}:</dt>
+    <dd><bind-custom [model]="vm.details.endDatePeriod" [format]="'DateTime'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'groupParticipantId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.groupParticipantId" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'active' }}:</dt>
+    <dd><bind-custom [model]="vm.details.active" [format]="'bool'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+</dl> 

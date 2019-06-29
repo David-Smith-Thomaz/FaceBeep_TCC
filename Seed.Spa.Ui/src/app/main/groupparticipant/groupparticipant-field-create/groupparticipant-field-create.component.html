@@ -1,0 +1,32 @@
+﻿<div class="row " [formGroup]="vm.form">
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'groupName' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.groupName' name='groupName' required formControlName='groupName'    maxlength=100 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'startDatePeriod' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.startDatePeriod' name='startDatePeriod' required formControlName='startDatePeriod' datetimepicker autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'endDatePeriod' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.endDatePeriod' name='endDatePeriod' required formControlName='endDatePeriod' datetimepicker autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='checkbox pt-4'>
+      <label>
+          <input type='checkbox'  [(ngModel)]='vm.model.active'  name='active' formControlName='active'  /> {{ vm.infos | traduction:"active" }}?
+      </label>
+    </div>
+  </section>
+
+</div>
+

@@ -1,0 +1,26 @@
+﻿<div class="row">
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'login' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.login' name='login' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'password' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.password' name='password' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'statusUserId'}}</label>
+      <select class='form-control'  name='statusUserId' [(ngModel)]='vm.modelFilter.statusUserId' datasource [dataitem]="'StatusUser'" [fieldFilterName]="'Description'"></select>
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'typeUserId'}}</label>
+      <select class='form-control'  name='typeUserId' [(ngModel)]='vm.modelFilter.typeUserId' datasource [dataitem]="'TypeUser'" [fieldFilterName]="'Description'"></select>
+    </div>
+  </section>
+</div>

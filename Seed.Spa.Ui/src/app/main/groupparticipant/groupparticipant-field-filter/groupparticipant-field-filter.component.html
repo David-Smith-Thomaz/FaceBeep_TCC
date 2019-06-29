@@ -1,0 +1,28 @@
+﻿<div class="row">
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'groupName' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.groupName' name='groupName' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'startDatePeriod' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.startDatePeriod' name='startDatePeriod'datepicker />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'endDatePeriod' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.endDatePeriod' name='endDatePeriod'datepicker />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <label>{{ vm.infos | traduction:'active' }}</label>
+<div class='form-group'>
+    <label class='radio-inline'><input type='radio' name='active' [(ngModel)]='vm.modelFilter.active'> Todos</label>
+    <label class='radio-inline'><input type='radio' name='active' [(ngModel)]='vm.modelFilter.active' value='true'> Sim</label>
+    <label class='radio-inline'><input type='radio' name='active' [(ngModel)]='vm.modelFilter.active' value='false'> Não</label>
+</div>
+  </section>
+</div>

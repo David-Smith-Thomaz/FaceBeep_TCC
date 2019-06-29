@@ -1,0 +1,26 @@
+﻿<div class="row">
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'enterDate' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.enterDate' name='enterDate'datepicker />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'exitDate' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.exitDate' name='exitDate'datepicker />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'statusRegisterId'}}</label>
+      <select class='form-control'  name='statusRegisterId' [(ngModel)]='vm.modelFilter.statusRegisterId' datasource [dataitem]="'StatusRegister'" [fieldFilterName]="'Description'"></select>
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'participantId'}}</label>
+      <select class='form-control'  name='participantId' [(ngModel)]='vm.modelFilter.participantId' datasource [dataitem]="'Participant'" [fieldFilterName]="'PhotoPerfil'"></select>
+    </div>
+  </section>
+</div>

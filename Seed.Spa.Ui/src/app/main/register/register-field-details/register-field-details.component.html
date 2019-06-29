@@ -1,0 +1,26 @@
+﻿<dl>
+    <dt>{{ vm.infos | traduction: 'description' }}:</dt>
+    <dd><bind-custom [model]="vm.details.description" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'enterDate' }}:</dt>
+    <dd><bind-custom [model]="vm.details.enterDate" [format]="'DateTime'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'exitDate' }}:</dt>
+    <dd><bind-custom [model]="vm.details.exitDate" [format]="'DateTime'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'registerId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.registerId" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'statusRegisterId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.statusRegisterId" [format]="'instance'" [tag]="'span'"  [instance]="'StatusRegister'"  [key]="'StatusRegisterId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'participantId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.participantId" [format]="'instance'" [tag]="'span'"  [instance]="'Participant'"  [key]="'ParticipantId'"></bind-custom></dd>
+ 
+
+</dl> 

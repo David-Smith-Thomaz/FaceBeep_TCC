@@ -1,0 +1,22 @@
+﻿<dl>
+    <dt>{{ vm.infos | traduction: 'login' }}:</dt>
+    <dd><bind-custom [model]="vm.details.login" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'password' }}:</dt>
+    <dd><bind-custom [model]="vm.details.password" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'userId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.userId" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'statusUserId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.statusUserId" [format]="'instance'" [tag]="'span'"  [instance]="'StatusUser'"  [key]="'StatusUserId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'typeUserId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.typeUserId" [format]="'instance'" [tag]="'span'"  [instance]="'TypeUser'"  [key]="'TypeUserId'"></bind-custom></dd>
+ 
+
+</dl> 
