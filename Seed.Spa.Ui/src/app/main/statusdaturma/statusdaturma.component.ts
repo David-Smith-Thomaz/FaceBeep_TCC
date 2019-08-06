@@ -1,0 +1,257 @@
+﻿import { Component, OnInit, ViewChild, Output, EventEmitter, ChangeDetectorRef, OnDestroy, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormsModule, FormGroup, FormControl} from '@angular/forms';
+
+import { ModalDirective } from 'ngx-bootstrap/modal';
+import { StatusDaTurmaService } from './statusdaturma.service';
+import { ViewModel } from '../../common/model/viewmodel';
+import { GlobalService, NotificationParameters} from '../../global.service';
+import { ComponentBase } from '../../common/components/component.base';
+import { LocationHistoryService } from '../../common/services/location.history';
+
+@Component({
+    selector: 'app-statusdaturma',
+    templateUrl: './statusdaturma.component.html',
+    styleUrls: ['./statusdaturma.component.css'],
+})
+export class StatusDaTurmaComponent extends ComponentBase implements OnInit, OnDestroy {
+
+    @Input() parentIdValue: any;
+    @Input() parentIdField: string;
+    @Input() isParent: boolean;
+
+    vm: ViewModel<any>;
+	
+    operationConfimationYes: any;
+    changeCultureEmitter: EventEmitter<string>;
+
+    @ViewChild('filterModal') private filterModal: ModalDirective;
+    @ViewChild('saveModal') private saveModal: ModalDirective;
+    @ViewChild('editModal') private editModal: ModalDirective;
+    @ViewChild('detailsModal') private detailsModal: ModalDirective;
+    
+    constructor(private statusDaTurmaService: StatusDaTurmaService, private router: Router, private ref: ChangeDetectorRef) {
+
+        super();
+        this.vm = null;
+
+    }
+
+    ngOnInit() {
+
+        this.vm = this.statusDaTurmaService.initVM();
+        this.configurationForParent();
+
+        if (this.parentIdValue) 
+            this.vm.modelFilter[this.parentIdField] = this.parentIdValue;
+
+        this.statusDaTurmaService.detectChanges(this.ref);
+        this.statusDaTurmaService.OnHide(this.saveModal, this.editModal, () => { this.hideComponents() });
+
+        this.onFilter(this.vm.modelFilter);
+
+        this.updateCulture();
+
+        this.changeCultureEmitter = GlobalService.getChangeCultureEmitter().subscribe((culture : any) => {
+            this.updateCulture(culture);
+        });
+
+    
+        this.vm.isParent = this.isParent;
+        this.vm.ParentIdField = this.parentIdField;
+    }
+
+    configurationForParent() {
+        if (this.isParent) {
+            this._showBtnBack = false;
+            this._showBtnFilter = false;
+            this._showBtnDetails = false;
+            this._showBtnPrint = false;
+        }
+    }
+
+    updateCulture(culture: string = null)
+    {
+        this.statusDaTurmaService.updateCulture(culture).then((infos : any) => {
+            this.vm.infos = infos;
+            this.vm.grid = this.statusDaTurmaService.getInfoGrid(infos);
+        });
+        this.statusDaTurmaService.updateCultureMain(culture).then((infos: any) => {
+            this.vm.generalInfo = infos;
+        });
+    }
+
+
+    public onFilter(modelFilter: any) {
+        modelFilter.queryOptimizerBehavior = "GRID_StatusDaTurma".toUpperCase();
+        this.statusDaTurmaService.get(modelFilter).subscribe((result) => {
+            this.vm.filterResult = result.dataList;
+            this.vm.summary = result.summary;
+            this.filterModal.hide();
+        })
+    }
+
+    public onExport() {
+        this.statusDaTurmaService.export(Object.assign(this.vm.modelFilter, { AttributeBehavior: "exportar" })).subscribe((result) => {
+            var a = document.createElement("a");
+            document.body.appendChild(a);
+            (a as HTMLElement).style.visibility = 'hidden';
+
+            var blob = new Blob([result], {
+            	type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+            });
+
+            var downloadUrl = window.URL.createObjectURL(blob);
+
+            a.href = downloadUrl;
+            a.download = "StatusDaTurma.xlsx";
+            a.click();
+            window.URL.revokeObjectURL(downloadUrl);
+        })
+    }
+
+    public onCreate() {
+
+        this.showContainerCreate();
+
+        this.vm.model = {};
+        if (this.parentIdValue)
+            this.vm.model[this.parentIdField] = this.parentIdValue;
+
+        this.navigateStrategy(this.vm, this.saveModal, this.router, "/statusdaturma/create");
+    }
+
+    public onEdit(model: any) {
+
+        this.vm.model = {};
+        let newModel : any = model;
+        if (model)  {
+            newModel = { id: model.statusDaTurmaId }
+        }
+
+        if (!this.vm.navigationModal) {
+            this.navigateStrategy(this.vm, this.editModal, this.router, "/statusdaturma/edit/" + newModel.id);
+        }
+        else {
+            this.statusDaTurmaService.get(newModel).subscribe((result) => {
+				      this.vm.model = result.dataList ? result.dataList[0] : result.data;
+				      this.showContainerEdit();
+				      this.editModal.show();
+            })
+        }
+    }
+
+    public onSave(model: any) {
+
+        this.statusDaTurmaService.save(model).subscribe((result) => {
+
+             this.onFilter(this.vm.modelFilter);
+
+            if (!this.vm.manterTelaAberta) {
+                this.saveModal.hide();
+                this.editModal.hide();
+                this.hideContainerCreate();
+                this.hideContainerEdit();
+            }
+
+        });
+
+    }
+
+    public onDetails(model: any) {
+    
+        this.vm.details = {};
+        let newModel : any = model;
+        if (model)
+        {
+            newModel = { id: model.statusDaTurmaId }
+        }
+		
+        if (!this.vm.navigationModal) {
+            this.navigateStrategy(this.vm, this.editModal, this.router, "/statusdaturma/details/" + newModel.id);
+        }
+        else {
+            this.statusDaTurmaService.get(newModel).subscribe((result) => {
+				      this.vm.details = result.dataList ? result.dataList[0] : result.data;
+				      this.showContainerDetails();
+				      this.detailsModal.show();
+            })
+        }
+
+    }
+
+    public onCancel() {
+
+        this.saveModal.hide();
+        this.editModal.hide();
+        this.detailsModal.hide();
+        this.filterModal.hide();
+        this.hideComponents();
+    }
+
+    public onShowFilter() {
+        this.showContainerFilters();
+        this.filterModal.show();
+    }
+
+    public onClearFilter() {
+        this.vm.modelFilter = {};
+        GlobalService.getNotificationEmitter().emit(new NotificationParameters("init", {
+            model: {}
+        }));
+    }
+
+    public onPrint(model: any) {
+        this.router.navigate(['/statusdaturma/print', model.statusDaTurmaId]);
+    }
+
+    public onDeleteConfimation(model: any) {
+
+        var conf = GlobalService.operationExecutedParameters(
+            "confirm-modal",
+            () => {
+                let newModel : any = model;
+                if (model)
+                {    
+                    newModel = { id: model.statusDaTurmaId }
+                }
+                this.statusDaTurmaService.delete(newModel).subscribe((result) => {
+                    this.vm.filterResult = this.vm.filterResult.filter(function (model) {
+                        return  model.statusDaTurmaId != result.data.statusDaTurmaId;
+                    });
+                    this.vm.summary.total = this.vm.filterResult.length
+                });
+            }
+        );
+
+        GlobalService.getOperationExecutedEmitter().emit(conf);
+    }
+
+    public onConfimationYes() {
+        this.operationConfimationYes();
+    }
+
+    public onPageChanged(pageConfig: any) {
+
+        let modelFilter = this.statusDaTurmaService.pagingConfig(this.vm.modelFilter, pageConfig);
+        this.statusDaTurmaService.get(modelFilter).subscribe((result) => {
+            this.vm.filterResult = result.dataList;
+            this.vm.summary = result.summary;
+        });
+    }
+
+    public onOrderBy(order: any) {
+
+        let modelFilter = this.statusDaTurmaService.orderByConfig(this.vm.modelFilter, order);
+        this.statusDaTurmaService.get(modelFilter).subscribe((result) => {
+            this.vm.filterResult = result.dataList;
+            this.vm.summary = result.summary;
+        });
+    }
+
+    ngOnDestroy() {
+        this.changeCultureEmitter.unsubscribe();
+        this.statusDaTurmaService.detectChangesStop();
+    }
+
+}

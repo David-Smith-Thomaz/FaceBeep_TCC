@@ -1,0 +1,68 @@
+﻿<div class="row " [formGroup]="vm.form">
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'apelido' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.apelido' name='apelido'  formControlName='apelido'    maxlength=50 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'nomeCompleto' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.nomeCompleto' name='nomeCompleto' required formControlName='nomeCompleto'    maxlength=150 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'endereco' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.endereco' name='endereco' required formControlName='endereco'    maxlength=150 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'bairro' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.bairro' name='bairro' required formControlName='bairro'    maxlength=150 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'Cep' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.Cep' name='Cep' required formControlName='Cep'  [textMask]='{ mask: vm.masks.maskCEP }'  maxlength=50 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'dataDenascimento' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.dataDenascimento' name='dataDenascimento' required formControlName='dataDenascimento' datetimepicker autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'usuarioId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'usuarioId' }}</label> 
+        <select class='form-control'  name='usuarioId' [(ngModel)]='vm.model.usuarioId' required formControlName='usuarioId' datasource [dataitem]="'Usuario'" [fieldFilterName]="'Login'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'tipoDeParticipanteId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'tipoDeParticipanteId' }}</label> 
+        <select class='form-control'  name='tipoDeParticipanteId' [(ngModel)]='vm.model.tipoDeParticipanteId' required formControlName='tipoDeParticipanteId' datasource [dataitem]="'TipoDeParticipante'" [fieldFilterName]="'Descricao'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'numeroCasa' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.numeroCasa' name='numeroCasa' required formControlName='numeroCasa'  maski='9999999999'  autocomplete='off'/>
+    </div>
+  </section>
+
+</div>
+

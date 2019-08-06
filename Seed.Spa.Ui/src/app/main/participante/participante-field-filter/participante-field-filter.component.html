@@ -1,0 +1,56 @@
+﻿<div class="row">
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'apelido' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.apelido' name='apelido' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'nomeCompleto' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.nomeCompleto' name='nomeCompleto' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'endereco' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.endereco' name='endereco' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'bairro' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.bairro' name='bairro' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'Cep' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.Cep' name='Cep' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'dataDenascimento' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.dataDenascimento' name='dataDenascimento'datepicker />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'usuarioId'}}</label>
+      <select class='form-control'  name='usuarioId' [(ngModel)]='vm.modelFilter.usuarioId' datasource [dataitem]="'Usuario'" [fieldFilterName]="'Login'"></select>
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'tipoDeParticipanteId'}}</label>
+      <select class='form-control'  name='tipoDeParticipanteId' [(ngModel)]='vm.modelFilter.tipoDeParticipanteId' datasource [dataitem]="'TipoDeParticipante'" [fieldFilterName]="'Descricao'"></select>
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'numeroCasa' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.numeroCasa' name='numeroCasa' />
+    </div>
+  </section>
+</div>

@@ -1,0 +1,30 @@
+﻿<dl>
+    <dt>{{ vm.infos | traduction: 'login' }}:</dt>
+    <dd><bind-custom [model]="vm.details.login" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'senha' }}:</dt>
+    <dd><bind-custom [model]="vm.details.senha" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'email' }}:</dt>
+    <dd><bind-custom [model]="vm.details.email" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'usuarioId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.usuarioId" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'statusDoUsuarioId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.statusDoUsuarioId" [format]="'instance'" [tag]="'span'"  [instance]="'StatusDoUsuario'"  [key]="'StatusDoUsuarioId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'tipoDeUsuarioId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.tipoDeUsuarioId" [format]="'instance'" [tag]="'span'"  [instance]="'TipoDeUsuario'"  [key]="'TipoDeUsuarioId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'participanteId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.participanteId" [format]="'int?'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+</dl> 

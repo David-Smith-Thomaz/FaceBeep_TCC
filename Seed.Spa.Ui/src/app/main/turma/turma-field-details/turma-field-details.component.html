@@ -1,0 +1,34 @@
+﻿<dl>
+    <dt>{{ vm.infos | traduction: 'codigoDaTurma' }}:</dt>
+    <dd><bind-custom [model]="vm.details.codigoDaTurma" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'nome' }}:</dt>
+    <dd><bind-custom [model]="vm.details.nome" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'descricao' }}:</dt>
+    <dd><bind-custom [model]="vm.details.descricao" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'dataInicio' }}:</dt>
+    <dd><bind-custom [model]="vm.details.dataInicio" [format]="'DateTime'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'dataFim' }}:</dt>
+    <dd><bind-custom [model]="vm.details.dataFim" [format]="'DateTime'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'turmaId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.turmaId" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'admTurmaId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.admTurmaId" [format]="'instance'" [tag]="'span'"  [instance]="'Participante'"  [key]="'AdmTurmaId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'statusDaTurmaId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.statusDaTurmaId" [format]="'instance'" [tag]="'span'"  [instance]="'StatusDaTurma'"  [key]="'StatusDaTurmaId'"></bind-custom></dd>
+ 
+
+</dl> 

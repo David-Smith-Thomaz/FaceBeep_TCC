@@ -20,33 +20,37 @@ namespace Seed.Api
             services.AddScoped<ICache, RedisComponent>();
             services.AddScoped<IUnitOfWork, UnitOfWork<DbContextSeed>>();
             
-			services.AddScoped<IParticipantApplicationService, ParticipantApplicationService>();
-			services.AddScoped<IParticipantService, ParticipantService>();
-			services.AddScoped<IParticipantRepository, ParticipantRepository>();
+			services.AddScoped<IStatusDoUsuarioApplicationService, StatusDoUsuarioApplicationService>();
+			services.AddScoped<IStatusDoUsuarioService, StatusDoUsuarioService>();
+			services.AddScoped<IStatusDoUsuarioRepository, StatusDoUsuarioRepository>();
 
-			services.AddScoped<IUserApplicationService, UserApplicationService>();
-			services.AddScoped<IUserService, UserService>();
-			services.AddScoped<IUserRepository, UserRepository>();
+			services.AddScoped<IUsuarioApplicationService, UsuarioApplicationService>();
+			services.AddScoped<IUsuarioService, UsuarioService>();
+			services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
-			services.AddScoped<IStatusUserApplicationService, StatusUserApplicationService>();
-			services.AddScoped<IStatusUserService, StatusUserService>();
-			services.AddScoped<IStatusUserRepository, StatusUserRepository>();
+			services.AddScoped<ITipoDeUsuarioApplicationService, TipoDeUsuarioApplicationService>();
+			services.AddScoped<ITipoDeUsuarioService, TipoDeUsuarioService>();
+			services.AddScoped<ITipoDeUsuarioRepository, TipoDeUsuarioRepository>();
 
-			services.AddScoped<ITypeUserApplicationService, TypeUserApplicationService>();
-			services.AddScoped<ITypeUserService, TypeUserService>();
-			services.AddScoped<ITypeUserRepository, TypeUserRepository>();
+			services.AddScoped<IParticipanteApplicationService, ParticipanteApplicationService>();
+			services.AddScoped<IParticipanteService, ParticipanteService>();
+			services.AddScoped<IParticipanteRepository, ParticipanteRepository>();
 
-			services.AddScoped<IGroupParticipantApplicationService, GroupParticipantApplicationService>();
-			services.AddScoped<IGroupParticipantService, GroupParticipantService>();
-			services.AddScoped<IGroupParticipantRepository, GroupParticipantRepository>();
+			services.AddScoped<ITipoDeParticipanteApplicationService, TipoDeParticipanteApplicationService>();
+			services.AddScoped<ITipoDeParticipanteService, TipoDeParticipanteService>();
+			services.AddScoped<ITipoDeParticipanteRepository, TipoDeParticipanteRepository>();
 
-			services.AddScoped<IRegisterApplicationService, RegisterApplicationService>();
-			services.AddScoped<IRegisterService, RegisterService>();
-			services.AddScoped<IRegisterRepository, RegisterRepository>();
+			services.AddScoped<ITurmaApplicationService, TurmaApplicationService>();
+			services.AddScoped<ITurmaService, TurmaService>();
+			services.AddScoped<ITurmaRepository, TurmaRepository>();
 
-			services.AddScoped<IStatusRegisterApplicationService, StatusRegisterApplicationService>();
-			services.AddScoped<IStatusRegisterService, StatusRegisterService>();
-			services.AddScoped<IStatusRegisterRepository, StatusRegisterRepository>();
+			services.AddScoped<IStatusDaTurmaApplicationService, StatusDaTurmaApplicationService>();
+			services.AddScoped<IStatusDaTurmaService, StatusDaTurmaService>();
+			services.AddScoped<IStatusDaTurmaRepository, StatusDaTurmaRepository>();
+
+			services.AddScoped<ITurmaParticipanteApplicationService, TurmaParticipanteApplicationService>();
+			services.AddScoped<ITurmaParticipanteService, TurmaParticipanteService>();
+			services.AddScoped<ITurmaParticipanteRepository, TurmaParticipanteRepository>();
 
 
 

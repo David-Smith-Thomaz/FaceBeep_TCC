@@ -1,0 +1,14 @@
+﻿<div class="row">
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'participanteId'}}</label>
+      <select class='form-control'  name='participanteId' [(ngModel)]='vm.modelFilter.participanteId' datasource [dataitem]="'Participante'" [fieldFilterName]="'NomeCompleto'"></select>
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'turmaId'}}</label>
+      <select class='form-control'  name='turmaId' [(ngModel)]='vm.modelFilter.turmaId' datasource [dataitem]="'Turma'" [fieldFilterName]="'CodigoDaTurma'"></select>
+    </div>
+  </section>
+</div>

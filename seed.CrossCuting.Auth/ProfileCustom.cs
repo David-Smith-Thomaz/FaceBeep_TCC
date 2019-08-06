@@ -50,13 +50,14 @@ namespace Seed.CrossCuting
         {
             var tools = new List<dynamic>
             {
-                new Tool { Icon = "fa fa-edit", Name = "Participant", Route = "/participant", Key = "Participant" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "User", Route = "/user", Key = "User" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "StatusUser", Route = "/statususer", Key = "StatusUser" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "TypeUser", Route = "/typeuser", Key = "TypeUser" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "GroupParticipant", Route = "/groupparticipant", Key = "GroupParticipant" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Register", Route = "/register", Key = "Register" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "StatusRegister", Route = "/statusregister", Key = "StatusRegister" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "StatusDoUsuario", Route = "/statusdousuario", Key = "StatusDoUsuario" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Usuario", Route = "/usuario", Key = "Usuario" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "TipoDeUsuario", Route = "/tipodeusuario", Key = "TipoDeUsuario" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Participante", Route = "/participante", Key = "Participante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "TipoDeParticipante", Route = "/tipodeparticipante", Key = "TipoDeParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "TurmaParticipante", Route = "/turmaparticipante", Key = "TurmaParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Turma", Route = "/turma", Key = "Turma" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "StatusDaTurma", Route = "/statusdaturma", Key = "StatusDaTurma" , Type = ETypeTools.Menu },
 
             };
             var _toolsForAdmin = JsonConvert.SerializeObject(tools);

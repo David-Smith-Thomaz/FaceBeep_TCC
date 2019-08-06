@@ -9,38 +9,42 @@ const APP_ROUTES_DEFAULT: Routes = [
     {
         path: '', component: MainComponent, data : { title : "Main" }, children: [
 
-            { path: 'participant',  canActivate: [AuthGuard], loadChildren: './main/participant/participant.module#ParticipantModule' },
+            { path: 'statusdousuario',  canActivate: [AuthGuard], loadChildren: './main/statusdousuario/statusdousuario.module#StatusDoUsuarioModule' },
 
-            { path: 'user',  canActivate: [AuthGuard], loadChildren: './main/user/user.module#UserModule' },
+            { path: 'usuario',  canActivate: [AuthGuard], loadChildren: './main/usuario/usuario.module#UsuarioModule' },
 
-            { path: 'statususer',  canActivate: [AuthGuard], loadChildren: './main/statususer/statususer.module#StatusUserModule' },
+            { path: 'tipodeusuario',  canActivate: [AuthGuard], loadChildren: './main/tipodeusuario/tipodeusuario.module#TipoDeUsuarioModule' },
 
-            { path: 'typeuser',  canActivate: [AuthGuard], loadChildren: './main/typeuser/typeuser.module#TypeUserModule' },
+            { path: 'participante',  canActivate: [AuthGuard], loadChildren: './main/participante/participante.module#ParticipanteModule' },
 
-            { path: 'groupparticipant',  canActivate: [AuthGuard], loadChildren: './main/groupparticipant/groupparticipant.module#GroupParticipantModule' },
+            { path: 'tipodeparticipante',  canActivate: [AuthGuard], loadChildren: './main/tipodeparticipante/tipodeparticipante.module#TipoDeParticipanteModule' },
 
-            { path: 'register',  canActivate: [AuthGuard], loadChildren: './main/register/register.module#RegisterModule' },
+            { path: 'turma',  canActivate: [AuthGuard], loadChildren: './main/turma/turma.module#TurmaModule' },
 
-            { path: 'statusregister',  canActivate: [AuthGuard], loadChildren: './main/statusregister/statusregister.module#StatusRegisterModule' },
+            { path: 'statusdaturma',  canActivate: [AuthGuard], loadChildren: './main/statusdaturma/statusdaturma.module#StatusDaTurmaModule' },
+
+            { path: 'turmaparticipante',  canActivate: [AuthGuard], loadChildren: './main/turmaparticipante/turmaparticipante.module#TurmaParticipanteModule' },
 
             { path: 'sampledash',  canActivate: [AuthGuard], loadChildren: './main/sampledash/sampledash.module#SampleDashModule' }
 
             ]
     },
 
-    { path: 'participant/print/:id', canActivate: [AuthGuard], loadChildren: './main/participant/participant-print/participant-print.module#ParticipantPrintModule' },
+    { path: 'statusdousuario/print/:id', canActivate: [AuthGuard], loadChildren: './main/statusdousuario/statusdousuario-print/statusdousuario-print.module#StatusDoUsuarioPrintModule' },
 
-    { path: 'user/print/:id', canActivate: [AuthGuard], loadChildren: './main/user/user-print/user-print.module#UserPrintModule' },
+    { path: 'usuario/print/:id', canActivate: [AuthGuard], loadChildren: './main/usuario/usuario-print/usuario-print.module#UsuarioPrintModule' },
 
-    { path: 'statususer/print/:id', canActivate: [AuthGuard], loadChildren: './main/statususer/statususer-print/statususer-print.module#StatusUserPrintModule' },
+    { path: 'tipodeusuario/print/:id', canActivate: [AuthGuard], loadChildren: './main/tipodeusuario/tipodeusuario-print/tipodeusuario-print.module#TipoDeUsuarioPrintModule' },
 
-    { path: 'typeuser/print/:id', canActivate: [AuthGuard], loadChildren: './main/typeuser/typeuser-print/typeuser-print.module#TypeUserPrintModule' },
+    { path: 'participante/print/:id', canActivate: [AuthGuard], loadChildren: './main/participante/participante-print/participante-print.module#ParticipantePrintModule' },
 
-    { path: 'groupparticipant/print/:id', canActivate: [AuthGuard], loadChildren: './main/groupparticipant/groupparticipant-print/groupparticipant-print.module#GroupParticipantPrintModule' },
+    { path: 'tipodeparticipante/print/:id', canActivate: [AuthGuard], loadChildren: './main/tipodeparticipante/tipodeparticipante-print/tipodeparticipante-print.module#TipoDeParticipantePrintModule' },
 
-    { path: 'register/print/:id', canActivate: [AuthGuard], loadChildren: './main/register/register-print/register-print.module#RegisterPrintModule' },
+    { path: 'turma/print/:id', canActivate: [AuthGuard], loadChildren: './main/turma/turma-print/turma-print.module#TurmaPrintModule' },
 
-    { path: 'statusregister/print/:id', canActivate: [AuthGuard], loadChildren: './main/statusregister/statusregister-print/statusregister-print.module#StatusRegisterPrintModule' },
+    { path: 'statusdaturma/print/:id', canActivate: [AuthGuard], loadChildren: './main/statusdaturma/statusdaturma-print/statusdaturma-print.module#StatusDaTurmaPrintModule' },
+
+    { path: 'turmaparticipante/print/:id', canActivate: [AuthGuard], loadChildren: './main/turmaparticipante/turmaparticipante-print/turmaparticipante-print.module#TurmaParticipantePrintModule' },
 
 
 ]

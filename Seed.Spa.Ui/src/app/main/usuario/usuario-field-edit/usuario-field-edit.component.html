@@ -1,0 +1,47 @@
+﻿<div class="row " [formGroup]="vm.form">
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'login' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.login' name='login' required formControlName='login'    maxlength=50 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'senha' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.senha' name='senha' required formControlName='senha'    maxlength=50 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'email' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.email' name='email' required formControlName='email'    maxlength=50 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'statusDoUsuarioId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'statusDoUsuarioId' }}</label> 
+        <select class='form-control'  name='statusDoUsuarioId' [(ngModel)]='vm.model.statusDoUsuarioId' required formControlName='statusDoUsuarioId' datasource [dataitem]="'StatusDoUsuario'" [fieldFilterName]="'Descricao'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'tipoDeUsuarioId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'tipoDeUsuarioId' }}</label> 
+        <select class='form-control'  name='tipoDeUsuarioId' [(ngModel)]='vm.model.tipoDeUsuarioId' required formControlName='tipoDeUsuarioId' datasource [dataitem]="'TipoDeUsuario'" [fieldFilterName]="'Descricao'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'participanteId' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.participanteId' name='participanteId'  formControlName='participanteId'  maski='9999999999'  autocomplete='off'/>
+    </div>
+  </section>
+
+</div>
+

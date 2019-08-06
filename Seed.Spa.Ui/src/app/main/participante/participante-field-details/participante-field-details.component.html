@@ -1,0 +1,42 @@
+﻿<dl>
+    <dt>{{ vm.infos | traduction: 'apelido' }}:</dt>
+    <dd><bind-custom [model]="vm.details.apelido" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'nomeCompleto' }}:</dt>
+    <dd><bind-custom [model]="vm.details.nomeCompleto" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'endereco' }}:</dt>
+    <dd><bind-custom [model]="vm.details.endereco" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'bairro' }}:</dt>
+    <dd><bind-custom [model]="vm.details.bairro" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'Cep' }}:</dt>
+    <dd><bind-custom [model]="vm.details.Cep" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'dataDenascimento' }}:</dt>
+    <dd><bind-custom [model]="vm.details.dataDenascimento" [format]="'DateTime'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'participanteId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.participanteId" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'usuarioId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.usuarioId" [format]="'instance'" [tag]="'span'"  [instance]="'Usuario'"  [key]="'UsuarioId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'tipoDeParticipanteId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.tipoDeParticipanteId" [format]="'instance'" [tag]="'span'"  [instance]="'TipoDeParticipante'"  [key]="'TipoDeParticipanteId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'numeroCasa' }}:</dt>
+    <dd><bind-custom [model]="vm.details.numeroCasa" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+</dl> 

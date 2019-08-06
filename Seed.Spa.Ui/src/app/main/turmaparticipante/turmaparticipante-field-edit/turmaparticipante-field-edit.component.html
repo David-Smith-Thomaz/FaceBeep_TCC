@@ -1,0 +1,19 @@
+﻿<div class="row " [formGroup]="vm.form">
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'participanteId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'participanteId' }}</label> 
+        <select class='form-control'  name='participanteId' [(ngModel)]='vm.model.participanteId' required formControlName='participanteId' datasource [dataitem]="'Participante'" [fieldFilterName]="'NomeCompleto'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'turmaId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'turmaId' }}</label> 
+        <select class='form-control'  name='turmaId' [(ngModel)]='vm.model.turmaId' required formControlName='turmaId' datasource [dataitem]="'Turma'" [fieldFilterName]="'CodigoDaTurma'"  ></select>
+      </div>
+        
+  </section>
+
+</div>
+

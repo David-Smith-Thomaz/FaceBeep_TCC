@@ -1,0 +1,38 @@
+﻿<div class="row">
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'login' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.login' name='login' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'senha' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.senha' name='senha' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'email' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.email' name='email' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'statusDoUsuarioId'}}</label>
+      <select class='form-control'  name='statusDoUsuarioId' [(ngModel)]='vm.modelFilter.statusDoUsuarioId' datasource [dataitem]="'StatusDoUsuario'" [fieldFilterName]="'Descricao'"></select>
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'tipoDeUsuarioId'}}</label>
+      <select class='form-control'  name='tipoDeUsuarioId' [(ngModel)]='vm.modelFilter.tipoDeUsuarioId' datasource [dataitem]="'TipoDeUsuario'" [fieldFilterName]="'Descricao'"></select>
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'participanteId' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.participanteId' name='participanteId' />
+    </div>
+  </section>
+</div>

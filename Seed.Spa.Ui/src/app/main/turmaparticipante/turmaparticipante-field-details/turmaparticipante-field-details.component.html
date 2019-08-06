@@ -1,0 +1,14 @@
+﻿<dl>
+    <dt>{{ vm.infos | traduction: 'turmaParticipanteId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.turmaParticipanteId" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'participanteId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.participanteId" [format]="'instance'" [tag]="'span'"  [instance]="'Participante'"  [key]="'ParticipanteId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'turmaId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.turmaId" [format]="'instance'" [tag]="'span'"  [instance]="'Turma'"  [key]="'TurmaId'"></bind-custom></dd>
+ 
+
+</dl> 

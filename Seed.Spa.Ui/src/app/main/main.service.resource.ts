@@ -15,13 +15,14 @@ export class MainServiceResource extends ServiceBase {
 
   getInfosResources() {
     return {
-            Participant: { label: 'Participant' },
-      User: { label: 'User' },
-      StatusUser: { label: 'StatusUser' },
-      TypeUser: { label: 'TypeUser' },
-      GroupParticipant: { label: 'GroupParticipant' },
-      Register: { label: 'Register' },
-      StatusRegister: { label: 'StatusRegister' },
+            StatusDoUsuario: { label: 'StatusDoUsuario' },
+      Usuario: { label: 'Usuario' },
+      TipoDeUsuario: { label: 'TipoDeUsuario' },
+      Participante: { label: 'Participante' },
+      TipoDeParticipante: { label: 'TipoDeParticipante' },
+      Turma: { label: 'Turma' },
+      StatusDaTurma: { label: 'StatusDaTurma' },
+      TurmaParticipante: { label: 'TurmaParticipante' },
     };
   }
 

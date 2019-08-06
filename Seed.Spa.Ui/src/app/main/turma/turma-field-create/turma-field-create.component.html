@@ -1,0 +1,54 @@
+﻿<div class="row " [formGroup]="vm.form">
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'codigoDaTurma' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.codigoDaTurma' name='codigoDaTurma' required formControlName='codigoDaTurma'    maxlength=150 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'nome' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.nome' name='nome' required formControlName='nome'    maxlength=150 autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'descricao' }}</label>
+      <textarea class='form-control'  [(ngModel)]='vm.model.descricao' name='descricao'  rows='5' formControlName='descricao' ></textarea>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'dataInicio' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.dataInicio' name='dataInicio' required formControlName='dataInicio' datetimepicker autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'dataFim' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.dataFim' name='dataFim' required formControlName='dataFim' datetimepicker autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'admTurmaId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'admTurmaId' }}</label> 
+        <select class='form-control'  name='admTurmaId' [(ngModel)]='vm.model.admTurmaId' required formControlName='admTurmaId' datasource [dataitem]="'Participante'" [fieldFilterName]="'NomeCompleto'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'statusDaTurmaId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'statusDaTurmaId' }}</label> 
+        <select class='form-control'  name='statusDaTurmaId' [(ngModel)]='vm.model.statusDaTurmaId' required formControlName='statusDaTurmaId' datasource [dataitem]="'StatusDaTurma'" [fieldFilterName]="'Descricao'"  ></select>
+      </div>
+        
+  </section>
+
+</div>
+

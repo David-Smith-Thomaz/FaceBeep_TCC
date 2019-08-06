@@ -401,3 +401,135 @@ pt-BR;Register;EnterDate;Enter Date
 pt-BR;Register;ExitDate;Exit Date
 pt-BR;StatusRegister;StatusRegisterId;Status Register
 pt-BR;StatusRegister;Description;Description
+pt-BR;Participant;ParticipantId;Participant
+pt-BR;Participant;UserId;User
+pt-BR;Participant;GroupParticipantId;Group Participant
+pt-BR;Participant;PhotoPerfil;Photo Perfil
+pt-BR;Participant;Name;Name
+pt-BR;Participant;Description;Description
+pt-BR;Participant;DocumentNumber;Document Number
+pt-BR;User;UserId;User
+pt-BR;User;StatusUserId;Status User
+pt-BR;User;TypeUserId;Type User
+pt-BR;User;Login;Login
+pt-BR;User;Password;Password
+pt-BR;StatusUser;StatusUserId;Status User
+pt-BR;StatusUser;Description;Description
+pt-BR;TypeUser;TypeUserId;Type User
+pt-BR;TypeUser;Description;Description
+pt-BR;GroupParticipant;GroupParticipantId;Group Participant
+pt-BR;GroupParticipant;GroupName;Group Name
+pt-BR;GroupParticipant;StartDatePeriod;Start Date Period
+pt-BR;GroupParticipant;EndDatePeriod;End Date Period
+pt-BR;GroupParticipant;Active;Active
+pt-BR;Register;RegisterId;Register
+pt-BR;Register;StatusRegisterId;Status Register
+pt-BR;Register;ParticipantId;Participant
+pt-BR;Register;Description;Description
+pt-BR;Register;EnterDate;Enter Date
+pt-BR;Register;ExitDate;Exit Date
+pt-BR;StatusRegister;StatusRegisterId;Status Register
+pt-BR;StatusRegister;Description;Description
+pt-BR;StatusDoUsuario;StatusDoUsuarioId;Status Do Usuario
+pt-BR;StatusDoUsuario;Descricao;Descricao
+pt-BR;Usuario;UsuarioId;Usuario
+pt-BR;Usuario;Login;Login
+pt-BR;Usuario;Senha;Senha
+pt-BR;Usuario;Email;Email
+pt-BR;Usuario;StatusDoUsuarioId;Status Do Usuario
+pt-BR;Usuario;TipoDeUsuarioId;Tipo De Usuario
+pt-BR;Usuario;ParticipanteId;Participante
+pt-BR;TipoDeUsuario;TipoDeUsuarioId;Tipo De Usuario
+pt-BR;TipoDeUsuario;Descricao;Descricao
+pt-BR;Participante;ParticipanteId;Participante
+pt-BR;Participante;UsuarioId;Usuario
+pt-BR;Participante;Apelido;Apelido
+pt-BR;Participante;TipoDeParticipanteId;Tipo De Participante
+pt-BR;Participante;NomeCompleto;Nome Completo
+pt-BR;Participante;DataDenascimento;Data Denascimento
+pt-BR;Participante;Endereco;Endereco
+pt-BR;Participante;Bairro;Bairro
+pt-BR;Participante;NumeroCasa;Numero Casa
+pt-BR;Participante;Cep;Cep
+pt-BR;TipoDeParticipante;TipoDeParticipanteId;Tipo De Participante
+pt-BR;TipoDeParticipante;Descricao;Descricao
+pt-BR;Turma;TurmaId;Turma
+pt-BR;Turma;CodigoDaTurma;Codigo Da Turma
+pt-BR;Turma;Nome;Nome
+pt-BR;Turma;Descricao;Descricao
+pt-BR;Turma;DataInicio;Data Inicio
+pt-BR;Turma;DataFim;Data Fim
+pt-BR;Turma;AdmTurmaId;Adm Turma
+pt-BR;Turma;StatusDaTurmaId;Status Da Turma
+pt-BR;StatusDoUsuario;StatusDoUsuarioId;Status Do Usuario
+pt-BR;StatusDoUsuario;Descricao;Descricao
+pt-BR;Usuario;UsuarioId;Usuario
+pt-BR;Usuario;Login;Login
+pt-BR;Usuario;Senha;Senha
+pt-BR;Usuario;Email;Email
+pt-BR;Usuario;StatusDoUsuarioId;Status Do Usuario
+pt-BR;Usuario;TipoDeUsuarioId;Tipo De Usuario
+pt-BR;Usuario;ParticipanteId;Participante
+pt-BR;TipoDeUsuario;TipoDeUsuarioId;Tipo De Usuario
+pt-BR;TipoDeUsuario;Descricao;Descricao
+pt-BR;Participante;ParticipanteId;Participante
+pt-BR;Participante;UsuarioId;Usuario
+pt-BR;Participante;Apelido;Apelido
+pt-BR;Participante;TipoDeParticipanteId;Tipo De Participante
+pt-BR;Participante;NomeCompleto;Nome Completo
+pt-BR;Participante;DataDenascimento;Data Denascimento
+pt-BR;Participante;Endereco;Endereco
+pt-BR;Participante;Bairro;Bairro
+pt-BR;Participante;NumeroCasa;Numero Casa
+pt-BR;Participante;Cep;Cep
+pt-BR;TipoDeParticipante;TipoDeParticipanteId;Tipo De Participante
+pt-BR;TipoDeParticipante;Descricao;Descricao
+pt-BR;Turma;TurmaId;Turma
+pt-BR;Turma;CodigoDaTurma;Codigo Da Turma
+pt-BR;Turma;Nome;Nome
+pt-BR;Turma;Descricao;Descricao
+pt-BR;Turma;DataInicio;Data Inicio
+pt-BR;Turma;DataFim;Data Fim
+pt-BR;Turma;AdmTurmaId;Adm Turma
+pt-BR;Turma;StatusDaTurmaId;Status Da Turma
+pt-BR;StatusDaTurma;StatusDaTurmaId;Status Da Turma
+pt-BR;StatusDaTurma;Descricao;Descricao
+pt-BR;TurmaParticipante;TurmaParticipanteId;Turma Participante
+pt-BR;TurmaParticipante;ParticipanteId;Participante
+pt-BR;TurmaParticipante;TurmaId;Turma
+pt-BR;StatusDoUsuario;StatusDoUsuarioId;Status Do Usuario
+pt-BR;StatusDoUsuario;Descricao;Descricao
+pt-BR;Usuario;UsuarioId;Usuario
+pt-BR;Usuario;Login;Login
+pt-BR;Usuario;Senha;Senha
+pt-BR;Usuario;Email;Email
+pt-BR;Usuario;StatusDoUsuarioId;Status Do Usuario
+pt-BR;Usuario;TipoDeUsuarioId;Tipo De Usuario
+pt-BR;Usuario;ParticipanteId;Participante
+pt-BR;TipoDeUsuario;TipoDeUsuarioId;Tipo De Usuario
+pt-BR;TipoDeUsuario;Descricao;Descricao
+pt-BR;Participante;ParticipanteId;Participante
+pt-BR;Participante;UsuarioId;Usuario
+pt-BR;Participante;Apelido;Apelido
+pt-BR;Participante;TipoDeParticipanteId;Tipo De Participante
+pt-BR;Participante;NomeCompleto;Nome Completo
+pt-BR;Participante;DataDenascimento;Data Denascimento
+pt-BR;Participante;Endereco;Endereco
+pt-BR;Participante;Bairro;Bairro
+pt-BR;Participante;NumeroCasa;Numero Casa
+pt-BR;Participante;Cep;Cep
+pt-BR;TipoDeParticipante;TipoDeParticipanteId;Tipo De Participante
+pt-BR;TipoDeParticipante;Descricao;Descricao
+pt-BR;Turma;TurmaId;Turma
+pt-BR;Turma;CodigoDaTurma;Codigo Da Turma
+pt-BR;Turma;Nome;Nome
+pt-BR;Turma;Descricao;Descricao
+pt-BR;Turma;DataInicio;Data Inicio
+pt-BR;Turma;DataFim;Data Fim
+pt-BR;Turma;AdmTurmaId;Adm Turma
+pt-BR;Turma;StatusDaTurmaId;Status Da Turma
+pt-BR;StatusDaTurma;StatusDaTurmaId;Status Da Turma
+pt-BR;StatusDaTurma;Descricao;Descricao
+pt-BR;TurmaParticipante;TurmaParticipanteId;Turma Participante
+pt-BR;TurmaParticipante;ParticipanteId;Participante
+pt-BR;TurmaParticipante;TurmaId;Turma

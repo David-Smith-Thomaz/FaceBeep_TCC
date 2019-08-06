@@ -51,13 +51,14 @@ namespace Seed.Gen
                 
                 TableInfo = new UniqueListTableInfo
                 {
-                   new TableInfo().FromTable("Participant").MakeBack().MakeFront(),
-                   new TableInfo().FromTable("User").MakeBack().MakeFront(),
-                   new TableInfo().FromTable("StatusUser").MakeBack().MakeFront(),
-                   new TableInfo().FromTable("TypeUser").MakeBack().MakeFront(),
-                   new TableInfo().FromTable("GroupParticipant").MakeBack().MakeFront(),
-                   new TableInfo().FromTable("Register").MakeBack().MakeFront(),
-                   new TableInfo().FromTable("StatusRegister").MakeBack().MakeFront(),
+                   new TableInfo().FromTable("StatusDoUsuario").MakeBack().MakeFront(),
+                   new TableInfo().FromTable("Usuario").MakeBack().MakeFront(),
+                   new TableInfo().FromTable("TipoDeUsuario").MakeBack().MakeFront(),
+                   new TableInfo().FromTable("Participante").MakeBack().MakeFront(),
+                   new TableInfo().FromTable("TipoDeParticipante").MakeBack().MakeFront(),
+                   new TableInfo().FromTable("Turma").MakeBack().MakeFront(),
+                   new TableInfo().FromTable("StatusDaTurma").MakeBack().MakeFront(),
+                   new TableInfo().FromTable("TurmaParticipante").MakeBack().MakeFront(),
                 }
             };
         }
