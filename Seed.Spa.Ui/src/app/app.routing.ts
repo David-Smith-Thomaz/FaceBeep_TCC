@@ -1,4 +1,4 @@
-﻿import { ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
@@ -7,7 +7,9 @@ import { AuthGuard } from './common/services/auth.guard';
 const APP_ROUTES_DEFAULT: Routes = [
 
     {
-        path: '', component: MainComponent, data : { title : "Main" }, children: [
+    path: '', component: MainComponent, data: { title: "Main" }, children: [
+
+            { path: 'dashboard', canActivate: [AuthGuard], loadChildren: './main/dashboard/dashboard.module#DashBoardModule' },
 
             { path: 'statusdousuario',  canActivate: [AuthGuard], loadChildren: './main/statusdousuario/statusdousuario.module#StatusDoUsuarioModule' },
 
@@ -28,7 +30,7 @@ const APP_ROUTES_DEFAULT: Routes = [
             { path: 'sampledash',  canActivate: [AuthGuard], loadChildren: './main/sampledash/sampledash.module#SampleDashModule' }
 
             ]
-    },
+  },
 
     { path: 'statusdousuario/print/:id', canActivate: [AuthGuard], loadChildren: './main/statusdousuario/statusdousuario-print/statusdousuario-print.module#StatusDoUsuarioPrintModule' },
 

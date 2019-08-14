@@ -70,7 +70,7 @@ export class MainComponent implements OnInit {
         }
 
         if (firstTime)
-          this.router.navigate(["/home"]);
+          this.router.navigate(["/dashboard"]);
       }
     });
   }
