@@ -12,14 +12,11 @@ namespace Seed.Domain.Entitys
 
         }
 
-		 public TurmaParticipante(int turmaparticipanteid, int participanteid, int turmaid) :
-                          base(turmaparticipanteid, participanteid, turmaid)
-                        {
+        public TurmaParticipante(int turmaparticipanteid, int participanteid, int turmaid) : base(turmaparticipanteid, participanteid, turmaid)
+        {
+        }
 
-                        }
-
-
-		public class TurmaParticipanteFactory : TurmaParticipanteFactoryBase
+        public class TurmaParticipanteFactory : TurmaParticipanteFactoryBase
         {
             public TurmaParticipante GetDefaultInstance(dynamic data, CurrentUser user)
             {
