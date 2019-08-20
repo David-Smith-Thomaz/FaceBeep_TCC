@@ -31,6 +31,12 @@
   </section>
   <section class="col-md-6">
     <div class='form-group'>
+      <label>{{ vm.infos | traduction:'fotoDoParticipanteId' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.fotoDoParticipanteId' name='fotoDoParticipanteId' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
       <label>{{ vm.infos | traduction:'dataDenascimento' }}</label>
       <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.dataDenascimento' name='dataDenascimento'datepicker />
     </div>

@@ -11,7 +11,7 @@ namespace Seed.Domain.Entitys
 
         }
 
-		public ParticipanteBase(int participanteid, int usuarioid, int tipodeparticipanteid, string nomecompleto, DateTime datadenascimento, string endereco, string bairro, int numerocasa, string cep) 
+		public ParticipanteBase(int participanteid, int usuarioid, int tipodeparticipanteid, string nomecompleto, DateTime datadenascimento, string endereco, string bairro, int numerocasa, string cep, string fotodoparticipanteid) 
         {
             this.ParticipanteId = participanteid;
             this.UsuarioId = usuarioid;
@@ -22,6 +22,7 @@ namespace Seed.Domain.Entitys
             this.Bairro = bairro;
             this.NumeroCasa = numerocasa;
             this.Cep = cep;
+            this.FotoDoParticipanteId = fotodoparticipanteid;
 
         }
 
@@ -38,7 +39,8 @@ namespace Seed.Domain.Entitys
                                         data.Endereco,
                                         data.Bairro,
                                         data.NumeroCasa,
-                                        data.Cep);
+                                        data.Cep,
+                                        data.FotoDoParticipanteId);
 
                 construction.SetarApelido(data.Apelido);
 
@@ -60,6 +62,7 @@ namespace Seed.Domain.Entitys
         public virtual string Bairro { get; protected set; }
         public virtual int NumeroCasa { get; protected set; }
         public virtual string Cep { get; protected set; }
+        public virtual string FotoDoParticipanteId { get; protected set; }
 
 		public virtual void SetarApelido(string apelido)
 		{

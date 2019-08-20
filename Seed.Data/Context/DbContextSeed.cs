@@ -25,6 +25,7 @@ namespace Seed.Data.Context
             new TurmaMap(modelBuilder.Entity<Turma>());
             new StatusDaTurmaMap(modelBuilder.Entity<StatusDaTurma>());
             new TurmaParticipanteMap(modelBuilder.Entity<TurmaParticipante>());
+            new FotoDoParticipanteMap(modelBuilder.Entity<FotoDoParticipante>());
 
         }
 

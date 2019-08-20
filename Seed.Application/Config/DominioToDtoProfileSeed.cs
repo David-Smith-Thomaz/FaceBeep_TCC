@@ -48,6 +48,11 @@ namespace Seed.Application.Config
             CreateMap(typeof(TurmaParticipante), typeof(TurmaParticipanteDtoSpecializedResult));
             CreateMap(typeof(TurmaParticipante), typeof(TurmaParticipanteDtoSpecializedReport));
             CreateMap(typeof(TurmaParticipante), typeof(TurmaParticipanteDtoSpecializedDetails));
+            CreateMap(typeof(FotoDoParticipante), typeof(FotoDoParticipanteDto)).ReverseMap();
+            CreateMap(typeof(FotoDoParticipante), typeof(FotoDoParticipanteDtoSpecialized));
+            CreateMap(typeof(FotoDoParticipante), typeof(FotoDoParticipanteDtoSpecializedResult));
+            CreateMap(typeof(FotoDoParticipante), typeof(FotoDoParticipanteDtoSpecializedReport));
+            CreateMap(typeof(FotoDoParticipante), typeof(FotoDoParticipanteDtoSpecializedDetails));
 
         }
 

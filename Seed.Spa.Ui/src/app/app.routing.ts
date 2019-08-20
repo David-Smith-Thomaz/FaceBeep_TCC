@@ -25,6 +25,8 @@ const APP_ROUTES_DEFAULT: Routes = [
 
             { path: 'turmaparticipante',  canActivate: [AuthGuard], loadChildren: './main/turmaparticipante/turmaparticipante.module#TurmaParticipanteModule' },
 
+            { path: 'fotodoparticipante',  canActivate: [AuthGuard], loadChildren: './main/fotodoparticipante/fotodoparticipante.module#FotoDoParticipanteModule' },
+
             { path: 'sampledash',  canActivate: [AuthGuard], loadChildren: './main/sampledash/sampledash.module#SampleDashModule' }
 
             ]
@@ -45,6 +47,8 @@ const APP_ROUTES_DEFAULT: Routes = [
     { path: 'statusdaturma/print/:id', canActivate: [AuthGuard], loadChildren: './main/statusdaturma/statusdaturma-print/statusdaturma-print.module#StatusDaTurmaPrintModule' },
 
     { path: 'turmaparticipante/print/:id', canActivate: [AuthGuard], loadChildren: './main/turmaparticipante/turmaparticipante-print/turmaparticipante-print.module#TurmaParticipantePrintModule' },
+
+    { path: 'fotodoparticipante/print/:id', canActivate: [AuthGuard], loadChildren: './main/fotodoparticipante/fotodoparticipante-print/fotodoparticipante-print.module#FotoDoParticipantePrintModule' },
 
 
 ]

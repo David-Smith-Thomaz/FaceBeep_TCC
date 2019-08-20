@@ -52,6 +52,10 @@ namespace Seed.Api
 			services.AddScoped<ITurmaParticipanteService, TurmaParticipanteService>();
 			services.AddScoped<ITurmaParticipanteRepository, TurmaParticipanteRepository>();
 
+			services.AddScoped<IFotoDoParticipanteApplicationService, FotoDoParticipanteApplicationService>();
+			services.AddScoped<IFotoDoParticipanteService, FotoDoParticipanteService>();
+			services.AddScoped<IFotoDoParticipanteRepository, FotoDoParticipanteRepository>();
+
 
 
             RegisterOtherComponents(services);

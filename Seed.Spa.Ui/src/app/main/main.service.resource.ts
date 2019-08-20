@@ -23,6 +23,7 @@ export class MainServiceResource extends ServiceBase {
       Turma: { label: 'Turma' },
       StatusDaTurma: { label: 'StatusDaTurma' },
       TurmaParticipante: { label: 'TurmaParticipante' },
+      FotoDoParticipante: { label: 'FotoDoParticipante' },
     };
   }
 

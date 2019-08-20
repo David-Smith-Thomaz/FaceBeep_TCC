@@ -45,6 +45,10 @@ namespace Seed.Dto
         [MaxLength(50, ErrorMessage = "Participante - Quantidade de caracteres maior que o permitido para o campo Cep")]
         public virtual string Cep {get; set;}
 
+        
+
+        public virtual string FotoDoParticipanteId {get; set;}
+
 
 		
 	}

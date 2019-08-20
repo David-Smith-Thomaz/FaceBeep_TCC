@@ -59,6 +59,7 @@ namespace Seed.CrossCuting
                 new Tool { Icon = "fa fa-edit", Name = "Turma do Participante", Route = "/turmaparticipante", Key = "TurmaParticipante" , Type = ETypeTools.Menu },
                 new Tool { Icon = "fa fa-edit", Name = "Turma", Route = "/turma", Key = "Turma" , Type = ETypeTools.Menu },
                 new Tool { Icon = "fa fa-edit", Name = "Status Da Turma", Route = "/statusdaturma", Key = "StatusDaTurma" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Foto do Participante", Route = "/fotodoparticipante", Key = "fotodoparticipante", Type = ETypeTools.Menu}
             };
             var _toolsForAdmin = JsonConvert.SerializeObject(tools);
             return new Dictionary<string, object>

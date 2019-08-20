@@ -59,9 +59,11 @@ namespace Seed.Gen
                    new TableInfo().FromTable("Turma").MakeBack().MakeFront(),
                    new TableInfo().FromTable("StatusDaTurma").MakeBack().MakeFront(),
                    new TableInfo().FromTable("TurmaParticipante").MakeBack().MakeFront(),
+                   new TableInfo().FromTable("FotoDoParticipante").MakeBack().MakeFront()
                 }
             };
         }
+
 
 
 

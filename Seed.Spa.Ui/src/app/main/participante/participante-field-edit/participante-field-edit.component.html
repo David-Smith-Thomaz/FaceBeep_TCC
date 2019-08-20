@@ -34,6 +34,13 @@
     </div>
   </section>
 
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'fotoDoParticipanteId'">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'fotoDoParticipanteId' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.fotoDoParticipanteId' name='fotoDoParticipanteId' required formControlName='fotoDoParticipanteId'    maxlength=150 autocomplete='off'/>
+    </div>
+  </section>
+
   <section class="col-md-12"  >
     <div class='form-group'>
       <label>{{ vm.infos | traduction:'dataDenascimento' }}</label>
