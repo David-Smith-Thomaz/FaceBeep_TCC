@@ -2,14 +2,44 @@
   <header class="header text-center pt-3">
     <h1>
       <span>
-        <strong>Cadastro de Alunos</strong>
+        <strong class="header text-center pt-3">Cadastro de Alunos</strong>
       </span>
     </h1>
   </header>
   <div>
-    <div class="text-center jumbotron">
-      <h2 class="display-3">Em breve</h2>
-      <p>mais informações</p>
+    <div class="text-center mt-5">
+      <section class="card">
+        <header class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <strong class="header text-center pt-3">Dados pessoais</strong>
+            </div>
+          </div>
+        </header>
+        <div class="card-body">
+          <form class="row">
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required placeholder="Nome Completo" [(ngModel)]="vm.model.nomeCompleto">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="date" class="form-control" required datetimepicker autocomplete="off" placeholder="Data de Nascimento">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="password" class="form-control" placeholder="Senha">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="email" class="form-control" required aria-describedby="emailHelp" placeholder="Seu email">
+            </div>
+            <div class="form-group col-md-12">
+              <label for="exampleFormControlFile1">Anexe uma foto ao seu cadastro</label>
+              <input type="file">
+            </div>
+          </form>
+        </div>
+        <footer class="card-footer text-right">
+            <button type="submit" class="btn btn-primary" (click)="nextRegister()">Enviar</button>
+        </footer>
+      </section>
     </div>
   </div>
 </div>

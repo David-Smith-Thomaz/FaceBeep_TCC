@@ -4,6 +4,8 @@ import { FormsModule, FormGroup, FormControl } from '@angular/forms';
 
 import { ModalDirective } from 'ngx-bootstrap/modal';
 import { ViewModel } from '../common/model/viewmodel';
+import { CadastroAlunoService } from './cadastroAluno.service';
+import { ApiService } from '../common/services/api.service';
 
 @Component({
   selector: 'app-cadastroAluno',
@@ -18,6 +20,6 @@ export class CadastroAlunoComponent implements OnInit {
   changeCultureEmitter: EventEmitter<string>;
 
   ngOnInit() {
-
+    //this.vm = this, CadastroAlunoService.initVM();
   }
 }

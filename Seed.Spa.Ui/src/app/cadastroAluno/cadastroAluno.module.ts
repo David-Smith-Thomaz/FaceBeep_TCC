@@ -8,6 +8,7 @@ import { CadastroAlunoComponent } from './cadastroAluno.component';
 import { ApiService } from '../common/services/api.service';
 import { CadastroAlunoService } from './cadastroAluno.service';
 import { CadastroAlunoServiceFields } from './cadastroAluno.service.fields';
+import { UtilSharedModule } from '../util/util-shared.module';
 
 @NgModule({
     imports: [
@@ -17,6 +18,7 @@ import { CadastroAlunoServiceFields } from './cadastroAluno.service.fields';
         ModalModule.forRoot(),
         CommonSharedModule,
         CadastroAlunoRoutingModule,
+        UtilSharedModule
 
     ],
     declarations: [
