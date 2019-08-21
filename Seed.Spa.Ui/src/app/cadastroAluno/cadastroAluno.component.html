@@ -95,6 +95,16 @@
           <button type="submit" class="btn btn-success" (click)="finishRegister()">Finalizar Cadastro</button>
         </footer>
       </section>
+
+      <div *ngIf="messageFinalyRegister">
+        <h1>
+          <span>
+            <strong class="header text-center pt-3">Cadastro finalizado com sucesso!</strong>
+          </span>
+        </h1>
+        <p>Estamos te redirecionando para a página de Login! Obrigado.</p>
+      </div>
+
     </div>
   </div>
 </div>

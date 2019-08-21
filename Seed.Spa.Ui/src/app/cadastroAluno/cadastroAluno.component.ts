@@ -7,6 +7,7 @@ import { ViewModel } from '../common/model/viewmodel';
 import { CadastroAlunoService } from './cadastroAluno.service';
 import { ApiService } from '../common/services/api.service';
 import { ComponentBase } from '../common/components/component.base';
+import { setTimeout } from 'timers';
 
 @Component({
   selector: 'app-cadastroAluno',
@@ -22,6 +23,7 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
   step1: boolean;
   step2: boolean;
   step3: boolean;
+  messageFinalyRegister: boolean;
 
   constructor(private cadastroAlunoService: CadastroAlunoService, private router: Router, private ref: ChangeDetectorRef) {
     super();
@@ -30,6 +32,7 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
     this.step1 = true
     this.step2 = false
     this.step3 = false
+    this.messageFinalyRegister = false
   }
 
   ngOnInit() {
@@ -37,7 +40,11 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
   }
 
   finishRegister() {
-
+    this.messageFinalyRegister = true
+    this.step1 = false
+    this.step2 = false
+    this.step3 = false
+    this.router.navigate(["/login"]);
   }
 
   nextRegisterStep1() {
