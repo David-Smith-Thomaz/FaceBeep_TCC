@@ -47,6 +47,7 @@ import ptBr from '@angular/common/locales/pt';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { MessageModalComponent } from './common/components/message-modal.component';
 import { CadastroAlunoComponent } from './cadastroAluno/cadastroAluno.component';
+import { CadastroAlunoService } from './cadastroAluno/cadastroAluno.service';
 
 registerLocaleData(ptBr)
 
@@ -104,6 +105,7 @@ export function startupServiceFactory(startupService: StartupService): Function 
     },
     AuthService,
     ApiService,
+    CadastroAlunoService,
     AuthGuard,
     MainService,
     ServiceBase,

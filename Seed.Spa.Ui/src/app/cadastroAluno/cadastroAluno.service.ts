@@ -9,17 +9,14 @@ import { ViewModel } from '../common/model/viewmodel';
 import { GlobalServiceCulture } from '../global.service.culture';
 import { MainService } from '../main/main.service';
 import { GlobalService } from '../global.service';
-import { CadastroAlunoServiceFields } from './cadastroAluno.service.fields';
 
 @Injectable()
 export class CadastroAlunoService extends ServiceBase {
 
     private _form : FormGroup;
 
-  constructor(private api: ApiService<any>, private serviceFields: CadastroAlunoServiceFields, private globalServiceCulture: GlobalServiceCulture, private mainService: MainService) {
-
+  constructor(private api: ApiService<any>, private globalServiceCulture: GlobalServiceCulture, private mainService: MainService) {
         super();
-        this._form = this.serviceFields.getFormFields();
 
     }
 
@@ -27,9 +24,8 @@ export class CadastroAlunoService extends ServiceBase {
 
         return new ViewModel({
             mostrarFiltros: false,
-            actionTitle: "TipoDeParticipante",
+            actionTitle: "CadastroAluno",
             actionDescription: "",
-            key : this.serviceFields.getKey(),
             downloadUri: GlobalService.getEndPoints().DOWNLOAD,
             filterResult: [],
             modelFilter: {},
@@ -47,6 +43,5 @@ export class CadastroAlunoService extends ServiceBase {
     }
 
     getInfos() {
-        return this.serviceFields.getInfosFields();
     }
 }
