@@ -27,7 +27,7 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
     super();
     this.vm = null;
 
-    this.step1 = false
+    this.step1 = true
     this.step2 = false
     this.step3 = false
   }
@@ -36,15 +36,23 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
     this.vm = this.cadastroAlunoService.initVM();
   }
 
-  nextRegister() {
-    if (this.step1) {
+  finishRegister() {
 
-    }
-    if (this.step2) {
+  }
 
-    }
-    if (this.step3) {
-
-    }
+  nextRegisterStep1() {
+    this.step1 = false
+    this.step2 = true
+    this.step3 = false
+  }
+  nextRegisterStep2() {
+    this.step1 = false
+    this.step2 = false
+    this.step3 = true
+  }
+  nextRegisterStep3() {
+    this.step1 = false
+    this.step2 = false
+    this.step3 = false
   }
 }

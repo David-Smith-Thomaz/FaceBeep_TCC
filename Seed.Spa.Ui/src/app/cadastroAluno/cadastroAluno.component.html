@@ -8,7 +8,7 @@
   </header>
   <div>
     <div class="text-center mt-5">
-      <section class="card">
+      <section class="card" *ngIf="step1">
         <header class="card-header">
           <div class="row align-items-center">
             <div class="col">
@@ -37,7 +37,62 @@
           </form>
         </div>
         <footer class="card-footer text-right">
-            <button type="submit" class="btn btn-primary" (click)="nextRegister()">Próximo</button>
+          <button type="submit" class="btn btn-primary" (click)="nextRegisterStep1()">Próximo</button>
+        </footer>
+      </section>
+
+      <section class="card" *ngIf="step2">
+        <header class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <strong class="header text-center pt-3">Endereço</strong>
+            </div>
+          </div>
+        </header>
+        <div class="card-body">
+          <form class="row">
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required placeholder="Endereço" [(ngModel)]="vm.model.nomeCompleto">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required placeholder="Bairro" [(ngModel)]="vm.model.nomeCompleto">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required placeholder="Número" [(ngModel)]="vm.model.nomeCompleto">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required placeholder="CEP" [(ngModel)]="vm.model.nomeCompleto">
+            </div>
+          </form>
+        </div>
+        <footer class="card-footer text-right">
+          <button type="submit" class="btn btn-primary" (click)="nextRegisterStep2()">Próximo</button>
+        </footer>
+      </section>
+
+      <section class="card" *ngIf="step3">
+        <header class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <strong class="header text-center pt-3">Dados de Login</strong>
+            </div>
+          </div>
+        </header>
+        <div class="card-body">
+          <form class="row">
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required placeholder="Login" [(ngModel)]="vm.model.nomeCompleto">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required placeholder="Senha" [(ngModel)]="vm.model.nomeCompleto">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required placeholder="Confirme sua senha" [(ngModel)]="vm.model.nomeCompleto">
+            </div>
+          </form>
+        </div>
+        <footer class="card-footer text-right">
+          <button type="submit" class="btn btn-success" (click)="finishRegister()">Finalizar Cadastro</button>
         </footer>
       </section>
     </div>
