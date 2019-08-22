@@ -1,4 +1,4 @@
-﻿import { ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
@@ -27,7 +27,7 @@ const APP_ROUTES_DEFAULT: Routes = [
 
             { path: 'fotodoparticipante',  canActivate: [AuthGuard], loadChildren: './main/fotodoparticipante/fotodoparticipante.module#FotoDoParticipanteModule' },
 
-            { path: 'sampledash',  canActivate: [AuthGuard], loadChildren: './main/sampledash/sampledash.module#SampleDashModule' }
+          { path: 'dashboard', canActivate: [AuthGuard], loadChildren: './main/dashboard/dashboard.module#DashBoardModule' }
 
             ]
     },
@@ -48,7 +48,9 @@ const APP_ROUTES_DEFAULT: Routes = [
 
     { path: 'turmaparticipante/print/:id', canActivate: [AuthGuard], loadChildren: './main/turmaparticipante/turmaparticipante-print/turmaparticipante-print.module#TurmaParticipantePrintModule' },
 
-    { path: 'fotodoparticipante/print/:id', canActivate: [AuthGuard], loadChildren: './main/fotodoparticipante/fotodoparticipante-print/fotodoparticipante-print.module#FotoDoParticipantePrintModule' },
+  { path: 'fotodoparticipante/print/:id', canActivate: [AuthGuard], loadChildren: './main/fotodoparticipante/fotodoparticipante-print/fotodoparticipante-print.module#FotoDoParticipantePrintModule' },
+
+  { path: 'dashboard', canActivate: [AuthGuard], loadChildren: './main/dashboard/dashboard.module#DashBoardModule' },
 
 
 ]

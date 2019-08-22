@@ -73,6 +73,7 @@ namespace Seed.CrossCuting
 
             var tools = new List<Tool>
             {
+                new Tool { Icon = "fa fa-edit", Name = "DashBoard", Route = "/dashboard", Key = "DashBoard" , Type = ETypeTools.Menu },
                 new Tool { Icon = "fa fa-edit", Name = "StatusDoUsuario", Route = "/statusdousuario", Key = "StatusDoUsuario" , Type = ETypeTools.Menu },
                 new Tool { Icon = "fa fa-edit", Name = "Usuario", Route = "/usuario", Key = "Usuario" , Type = ETypeTools.Menu },
                 new Tool { Icon = "fa fa-edit", Name = "TipoDeUsuario", Route = "/tipodeusuario", Key = "TipoDeUsuario" , Type = ETypeTools.Menu },
