@@ -51,15 +51,21 @@ namespace Seed.CrossCuting
             var tools = new List<dynamic>
             {
                 new Tool { Icon = "fa fa-edit", Name = "DashBoard", Route = "/dashboard", Key = "DashBoard" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Status Do Usuario", Route = "/statusdousuario", Key = "StatusDoUsuario" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Usuario", Route = "/usuario", Key = "Usuario" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Tipo De Usuario", Route = "/tipodeusuario", Key = "TipoDeUsuario" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Participante", Route = "/participante", Key = "Participante" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Tipo De Participante", Route = "/tipodeparticipante", Key = "TipoDeParticipante" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Turma do Participante", Route = "/turmaparticipante", Key = "TurmaParticipante" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Turma", Route = "/turma", Key = "Turma" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Status Da Turma", Route = "/statusdaturma", Key = "StatusDaTurma" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Foto do Participante", Route = "/fotodoparticipante", Key = "fotodoparticipante", Type = ETypeTools.Menu}
+
+                new Tool { Icon = "fa fa-edit", Name = "Usuários", Key = "MenuUsuario" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Usuario", Route = "/usuario", Key = "Usuario", ParentKey = "MenuUsuario" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Status", Route = "/statusdousuario", Key = "StatusDoUsuario", ParentKey = "MenuUsuario" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Tipo", Route = "/tipodeusuario", Key = "TipoDeUsuario", ParentKey = "MenuUsuario" , Type = ETypeTools.Menu },
+
+                new Tool { Icon = "fa fa-edit", Name = "Turmas", Key = "MenuTurmaParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Turma do Participante", Route = "/turmaparticipante", Key = "TurmaParticipante", ParentKey = "MenuTurmaParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Config Turma", Route = "/turma", Key = "Turma" , ParentKey = "MenuTurmaParticipante", Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Status", Route = "/statusdaturma", Key = "StatusDaTurma", ParentKey = "MenuTurmaParticipante" ,Type = ETypeTools.Menu },
+
+                new Tool { Icon = "fa fa-edit", Name = "Alunos", Key = "MenuParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Config Aluno", Route = "/participante", Key = "Participante", ParentKey = "MenuParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Tipo", Route = "/tipodeparticipante", Key = "TipoDeParticipante", ParentKey = "MenuParticipante" , Type = ETypeTools.Menu },
+
             };
             var _toolsForAdmin = JsonConvert.SerializeObject(tools);
             return new Dictionary<string, object>
@@ -74,14 +80,20 @@ namespace Seed.CrossCuting
             var tools = new List<Tool>
             {
                 new Tool { Icon = "fa fa-edit", Name = "DashBoard", Route = "/dashboard", Key = "DashBoard" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "StatusDoUsuario", Route = "/statusdousuario", Key = "StatusDoUsuario" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Usuario", Route = "/usuario", Key = "Usuario" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "TipoDeUsuario", Route = "/tipodeusuario", Key = "TipoDeUsuario" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Participante", Route = "/participante", Key = "Participante" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "TipoDeParticipante", Route = "/tipodeparticipante", Key = "TipoDeParticipante" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "TurmaParticipante", Route = "/turmaparticipante", Key = "TurmaParticipante" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Turma", Route = "/turma", Key = "Turma" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "StatusDaTurma", Route = "/statusdaturma", Key = "StatusDaTurma" , Type = ETypeTools.Menu },
+
+                new Tool { Icon = "fa fa-edit", Name = "Usuários", Key = "MenuUsuario" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Usuario", Route = "/usuario", Key = "Usuario", ParentKey = "MenuUsuario" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Status", Route = "/statusdousuario", Key = "StatusDoUsuario", ParentKey = "MenuUsuario" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Tipo", Route = "/tipodeusuario", Key = "TipoDeUsuario", ParentKey = "MenuUsuario" , Type = ETypeTools.Menu },
+
+                new Tool { Icon = "fa fa-edit", Name = "Turmas", Key = "MenuTurmaParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Turma do Participante", Route = "/turmaparticipante", Key = "TurmaParticipante", ParentKey = "MenuTurmaParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Config Turma", Route = "/turma", Key = "Turma" , ParentKey = "MenuTurmaParticipante", Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Status", Route = "/statusdaturma", Key = "StatusDaTurma", ParentKey = "MenuTurmaParticipante" ,Type = ETypeTools.Menu },
+
+                new Tool { Icon = "fa fa-edit", Name = "Alunos", Key = "MenuParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Config Aluno", Route = "/participante", Key = "Participante", ParentKey = "MenuParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Tipo", Route = "/tipodeparticipante", Key = "TipoDeParticipante", ParentKey = "MenuParticipante" , Type = ETypeTools.Menu },
 
             };
 
