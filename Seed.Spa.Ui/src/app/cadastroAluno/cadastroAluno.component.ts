@@ -7,7 +7,6 @@ import { ViewModel } from '../common/model/viewmodel';
 import { CadastroAlunoService } from './cadastroAluno.service';
 import { ApiService } from '../common/services/api.service';
 import { ComponentBase } from '../common/components/component.base';
-import { setTimeout } from 'timers';
 
 @Component({
   selector: 'app-cadastroAluno',
