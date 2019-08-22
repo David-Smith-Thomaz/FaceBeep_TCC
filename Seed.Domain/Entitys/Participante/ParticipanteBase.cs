@@ -11,7 +11,7 @@ namespace Seed.Domain.Entitys
 
         }
 
-		public ParticipanteBase(int participanteid, int usuarioid, int tipodeparticipanteid, string nomecompleto, DateTime datadenascimento, string endereco, string bairro, int numerocasa, string cep, string fotodoparticipanteid) 
+		public ParticipanteBase(int participanteid, int usuarioid, int tipodeparticipanteid, string nomecompleto, DateTime datadenascimento, string endereco, string bairro, int numerocasa, string cep, int fotodoparticipanteid) 
         {
             this.ParticipanteId = participanteid;
             this.UsuarioId = usuarioid;
@@ -62,7 +62,7 @@ namespace Seed.Domain.Entitys
         public virtual string Bairro { get; protected set; }
         public virtual int NumeroCasa { get; protected set; }
         public virtual string Cep { get; protected set; }
-        public virtual string FotoDoParticipanteId { get; protected set; }
+        public virtual int FotoDoParticipanteId { get; protected set; }
 
 		public virtual void SetarApelido(string apelido)
 		{

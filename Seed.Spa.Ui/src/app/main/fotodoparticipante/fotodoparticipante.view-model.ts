@@ -1,3 +1,4 @@
 ﻿export class FotoDoParticipante {
-    fotoDoParticipateId : string;
+    descricao : string;
+    fotoDoParticipateId : number;
 }

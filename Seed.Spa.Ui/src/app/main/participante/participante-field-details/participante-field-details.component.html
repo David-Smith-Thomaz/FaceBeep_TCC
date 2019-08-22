@@ -19,10 +19,6 @@
     <dd><bind-custom [model]="vm.details.Cep" [format]="'string'" [tag]="'span'" ></bind-custom></dd>
  
 
-    <dt>{{ vm.infos | traduction: 'fotoDoParticipanteId' }}:</dt>
-    <dd><bind-custom [model]="vm.details.fotoDoParticipanteId" [format]="'instance'" [tag]="'span'"  [instance]="'FotoDoParticipante'"  [key]="'FotoDoParticipanteId'"></bind-custom></dd>
- 
-
     <dt>{{ vm.infos | traduction: 'dataDenascimento' }}:</dt>
     <dd><bind-custom [model]="vm.details.dataDenascimento" [format]="'DateTime'" [tag]="'span'" ></bind-custom></dd>
  
@@ -41,6 +37,10 @@
 
     <dt>{{ vm.infos | traduction: 'numeroCasa' }}:</dt>
     <dd><bind-custom [model]="vm.details.numeroCasa" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'fotoDoParticipanteId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.fotoDoParticipanteId" [format]="'instance'" [tag]="'span'"  [instance]="'FotoDoParticipante'"  [key]="'FotoDoParticipanteId'"></bind-custom></dd>
  
 
 </dl> 

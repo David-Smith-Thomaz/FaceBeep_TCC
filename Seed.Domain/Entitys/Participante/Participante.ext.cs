@@ -12,7 +12,7 @@ namespace Seed.Domain.Entitys
 
         }
 
-        public Participante(int participanteid, int usuarioid, int tipodeparticipanteid, string nomecompleto, DateTime datadenascimento, string endereco, string bairro, int numerocasa, string cep, string fotodoparticipanteid) : base(participanteid, usuarioid, tipodeparticipanteid, nomecompleto, datadenascimento, endereco, bairro, numerocasa, cep, fotodoparticipanteid)
+        public Participante(int participanteid, int usuarioid, int tipodeparticipanteid, string nomecompleto, DateTime datadenascimento, string endereco, string bairro, int numerocasa, string cep, int fotodoparticipanteid) : base(participanteid, usuarioid, tipodeparticipanteid, nomecompleto, datadenascimento, endereco, bairro, numerocasa, cep, fotodoparticipanteid)
         {
         }
 

@@ -52,7 +52,7 @@ namespace Seed.Api.Controllers
 
 		[HttpGet("{id}")]
 		[Authorize(Policy = "CanRead")]
-		public async Task<IActionResult> Get(string id, [FromQuery]FotoDoParticipanteFilter filters)
+		public async Task<IActionResult> Get(int id, [FromQuery]FotoDoParticipanteFilter filters)
 		{
 			var result = new HttpResult<FotoDoParticipanteDto>(this._logger);
             try
@@ -111,7 +111,7 @@ namespace Seed.Api.Controllers
 		[Authorize(Policy = "CanDelete")]
         [HttpDelete]
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(string id, FotoDoParticipanteDto dto)
+        public async Task<IActionResult> Delete(int id, FotoDoParticipanteDto dto)
         {
             var result = new HttpResult<FotoDoParticipanteDto>(this._logger);
             try

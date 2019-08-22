@@ -12,14 +12,11 @@ namespace Seed.Domain.Entitys
 
         }
 
-		 public FotoDoParticipante(string fotodoparticipateid) :
-                          base(fotodoparticipateid)
-                        {
+        public FotoDoParticipante(int fotodoparticipateid, string descricao) : base(fotodoparticipateid, descricao)
+        {
+        }
 
-                        }
-
-
-		public class FotoDoParticipanteFactory : FotoDoParticipanteFactoryBase
+        public class FotoDoParticipanteFactory : FotoDoParticipanteFactoryBase
         {
             public FotoDoParticipante GetDefaultInstance(dynamic data, CurrentUser user)
             {

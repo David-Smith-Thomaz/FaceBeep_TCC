@@ -15,6 +15,7 @@ namespace Seed.Data.Map
             type.Property(t => t.FotoDoParticipateId).HasColumnName("FotoDoParticipateId");
            
 
+            type.Property(t => t.Descricao).HasColumnName("Descricao").HasColumnType("varchar(150)");
             type.Property(t => t.UserAlterId).HasColumnName("UserAlterId");
             type.Property(t => t.UserAlterDate).HasColumnName("UserAlterDate");
             type.Property(t => t.UserCreateId).HasColumnName("UserCreateId");

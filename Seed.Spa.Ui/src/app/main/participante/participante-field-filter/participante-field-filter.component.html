@@ -31,12 +31,6 @@
   </section>
   <section class="col-md-6">
     <div class='form-group'>
-      <label>{{ vm.infos | traduction:'fotoDoParticipanteId' }}</label>
-      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.fotoDoParticipanteId' name='fotoDoParticipanteId' />
-    </div>
-  </section>
-  <section class="col-md-6">
-    <div class='form-group'>
       <label>{{ vm.infos | traduction:'dataDenascimento' }}</label>
       <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.dataDenascimento' name='dataDenascimento'datepicker />
     </div>
@@ -57,6 +51,12 @@
     <div class='form-group'>
       <label>{{ vm.infos | traduction:'numeroCasa' }}</label>
       <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.numeroCasa' name='numeroCasa' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'fotoDoParticipanteId'}}</label>
+      <select class='form-control'  name='fotoDoParticipanteId' [(ngModel)]='vm.modelFilter.fotoDoParticipanteId' datasource [dataitem]="'FotoDoParticipante'" [fieldFilterName]="'Descricao'"></select>
     </div>
   </section>
 </div>

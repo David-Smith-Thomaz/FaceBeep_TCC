@@ -47,7 +47,7 @@ namespace Seed.Dto
 
         
 
-        public virtual string FotoDoParticipanteId {get; set;}
+        public virtual int FotoDoParticipanteId {get; set;}
 
 
 		

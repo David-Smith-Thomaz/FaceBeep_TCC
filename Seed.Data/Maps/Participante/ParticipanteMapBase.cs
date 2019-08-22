@@ -24,7 +24,7 @@ namespace Seed.Data.Map
             type.Property(t => t.Bairro).HasColumnName("Bairro").HasColumnType("varchar(150)");
             type.Property(t => t.NumeroCasa).HasColumnName("NumeroCasa");
             type.Property(t => t.Cep).HasColumnName("Cep").HasColumnType("varchar(50)");
-            type.Property(t => t.FotoDoParticipanteId).HasColumnName("FotoDoParticipanteId").HasColumnType("varchar(150)");
+            type.Property(t => t.FotoDoParticipanteId).HasColumnName("FotoDoParticipanteId");
             type.Property(t => t.UserAlterDate).HasColumnName("UserAlterDate");
             type.Property(t => t.UserCreateId).HasColumnName("UserCreateId");
             type.Property(t => t.UserCreateDate).HasColumnName("UserCreateDate");

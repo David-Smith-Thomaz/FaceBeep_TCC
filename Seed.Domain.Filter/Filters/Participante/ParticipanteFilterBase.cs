@@ -18,7 +18,7 @@ namespace Seed.Domain.Filter
         public virtual string Bairro { get; set;} 
         public virtual int NumeroCasa { get; set;} 
         public virtual string Cep { get; set;} 
-        public virtual string FotoDoParticipanteId { get; set;} 
+        public virtual int FotoDoParticipanteId { get; set;} 
         public virtual DateTime? UserAlterDateStart { get; set;} 
         public virtual DateTime? UserAlterDateEnd { get; set;} 
         public virtual DateTime? UserAlterDate { get; set;} 

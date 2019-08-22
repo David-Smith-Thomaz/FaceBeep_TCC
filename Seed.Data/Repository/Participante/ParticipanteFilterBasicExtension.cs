@@ -77,7 +77,7 @@ namespace Seed.Data.Repository
             if (filters.FotoDoParticipanteId.IsSent()) 
 			{ 
 				
-				queryFilter = queryFilter.Where(_=>_.FotoDoParticipanteId.Contains(filters.FotoDoParticipanteId));
+				queryFilter = queryFilter.Where(_=>_.FotoDoParticipanteId == filters.FotoDoParticipanteId);
 			}
             if (filters.UserAlterDate.IsSent()) 
 			{ 

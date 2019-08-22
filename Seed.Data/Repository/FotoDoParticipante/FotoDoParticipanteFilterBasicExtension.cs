@@ -11,12 +11,17 @@ namespace Seed.Data.Repository
         {
             var queryFilter = queryBase;
 
-			
+			if (filters.Ids.IsSent()) queryFilter = queryFilter.Where(_ => filters.GetIds().Contains(_.FotoDoParticipateId));
 
             if (filters.FotoDoParticipateId.IsSent()) 
 			{ 
 				
-				queryFilter = queryFilter.Where(_=>_.FotoDoParticipateId.Contains(filters.FotoDoParticipateId));
+				queryFilter = queryFilter.Where(_=>_.FotoDoParticipateId == filters.FotoDoParticipateId);
+			}
+            if (filters.Descricao.IsSent()) 
+			{ 
+				
+				queryFilter = queryFilter.Where(_=>_.Descricao.Contains(filters.Descricao));
 			}
             if (filters.UserAlterId.IsSent()) 
 			{ 
