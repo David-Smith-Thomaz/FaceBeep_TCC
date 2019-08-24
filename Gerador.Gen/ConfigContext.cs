@@ -46,7 +46,7 @@ namespace Seed.Gen
                 MakeToolsProfile = false,
 
                 Routes = new List<RouteConfig> {
-                    new RouteConfig{ Route = "{ path: 'dashboard',  canActivate: [AuthGuard], loadChildren: './main/dashboard/dashboard.module#DashBoardModule' }" }
+                    new RouteConfig{ Route = "{ path: 'dashboard',  canActivate: [AuthGuard], loadChildren: './main/dashboard/dashboard.module#DashBoardModule' }" }             
                 },
                 
                 TableInfo = new UniqueListTableInfo

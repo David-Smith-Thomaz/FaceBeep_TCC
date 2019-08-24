@@ -7,6 +7,8 @@ import { ViewModel } from '../common/model/viewmodel';
 import { CadastroAlunoService } from './cadastroAluno.service';
 import { ApiService } from '../common/services/api.service';
 import { ComponentBase } from '../common/components/component.base';
+import { WebcamInitError, WebcamImage, WebcamUtil } from 'ngx-webcam';
+import { Subject, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-cadastroAluno',
@@ -23,6 +25,23 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
   step2: boolean;
   step3: boolean;
   messageFinalyRegister: boolean;
+  showWebcam = true;
+  allowCameraSwitch = true;
+  multipleWebcamsAvailable = false;
+  deviceId: string;
+  videoOptions: MediaTrackConstraints = {
+    //width: {ideal: 1024},
+    //height: {ideal: 576}
+  };
+  public errors: WebcamInitError[] = [];
+
+  // latest snapshot
+  public webcamImage: WebcamImage = null;
+
+  // webcam snapshot trigger
+  private trigger: Subject<void> = new Subject<void>();
+  // switch to next / previous / specific webcam; true/false: forward/backwards, string: deviceId
+  private nextWebcam: Subject<boolean | string> = new Subject<boolean | string>();
 
   constructor(private cadastroAlunoService: CadastroAlunoService, private router: Router, private ref: ChangeDetectorRef) {
     super();
@@ -36,6 +55,10 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
 
   ngOnInit() {
     this.vm = this.cadastroAlunoService.initVM();
+    WebcamUtil.getAvailableVideoInputs()
+      .then((mediaDevices: MediaDeviceInfo[]) => {
+        this.multipleWebcamsAvailable = mediaDevices && mediaDevices.length > 1;
+      });
   }
 
   finishRegister() {
@@ -60,5 +83,47 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
     this.step1 = false
     this.step2 = false
     this.step3 = false
+  }
+
+  public triggerSnapshot(): void {
+    this.trigger.next();
+    this.showWebcam = false;
+  }
+
+  public toggleWebcam(): void {
+    this.showWebcam = !this.showWebcam;
+  }
+
+  public handleInitError(error: WebcamInitError): void {
+    this.errors.push(error);
+  }
+
+  public showNextWebcam(directionOrDeviceId: boolean | string): void {
+    // true => move forward through devices
+    // false => move backwards through devices
+    // string => move to device with given deviceId
+    this.nextWebcam.next(directionOrDeviceId);
+  }
+
+  public handleImage(webcamImage: WebcamImage): void {
+    console.info('received webcam image', webcamImage);
+    this.webcamImage = webcamImage;
+  }
+
+  public cameraWasSwitched(deviceId: string): void {
+    this.deviceId = deviceId;
+  }
+
+  public triggerSnapshotAgain() {
+    this.showWebcam = true;
+    this.webcamImage = null
+  }
+
+  public get triggerObservable(): Observable<void> {
+    return this.trigger.asObservable();
+  }
+
+  public get nextWebcamObservable(): Observable<boolean | string> {
+    return this.nextWebcam.asObservable();
   }
 }

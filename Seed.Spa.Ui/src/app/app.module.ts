@@ -48,6 +48,7 @@ import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { MessageModalComponent } from './common/components/message-modal.component';
 import { CadastroAlunoComponent } from './cadastroAluno/cadastroAluno.component';
 import { CadastroAlunoService } from './cadastroAluno/cadastroAluno.service';
+import { WebcamModule } from 'ngx-webcam';
 
 registerLocaleData(ptBr)
 
@@ -82,6 +83,9 @@ export function startupServiceFactory(startupService: StartupService): Function 
     AppAsideModule,
     AppFooterModule,
     AppHeaderModule,
+    WebcamModule,
+    BrowserModule,
+    FormsModule,
     AppBreadcrumbModule.forRoot(),
     AppSidebarModule,
     PerfectScrollbarModule,

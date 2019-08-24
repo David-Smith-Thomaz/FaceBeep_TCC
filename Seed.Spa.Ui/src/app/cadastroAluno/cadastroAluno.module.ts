@@ -8,6 +8,8 @@ import { CadastroAlunoComponent } from './cadastroAluno.component';
 import { ApiService } from '../common/services/api.service';
 import { CadastroAlunoService } from './cadastroAluno.service';
 import { UtilSharedModule } from '../util/util-shared.module';
+import { WebcamModule } from 'ngx-webcam';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
     imports: [
@@ -18,6 +20,9 @@ import { UtilSharedModule } from '../util/util-shared.module';
         CommonSharedModule,
         CadastroAlunoRoutingModule,
         UtilSharedModule,
+        WebcamModule,
+        BrowserModule,
+        FormsModule,
     ],
     declarations: [
         CadastroAlunoComponent,

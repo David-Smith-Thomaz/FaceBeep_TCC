@@ -8,6 +8,7 @@
   </header>
   <div>
     <div class="text-center mt-5">
+
       <section class="card" *ngIf="step1">
         <header class="card-header">
           <div class="row align-items-center">
@@ -19,25 +20,36 @@
         <div class="card-body">
           <form class="row">
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" required placeholder="Nome Completo" [(ngModel)]="vm.model.nomeCompleto">
+              <input type="text" class="form-control" name="nomecompleto" required placeholder="Nome Completo" [(ngModel)]="vm.model.nomeCompleto">
             </div>
             <div class="form-group col-md-12">
-              <input type="date" class="form-control" required datetimepicker autocomplete="off" placeholder="Data de Nascimento">
+              <input type="date" class="form-control" name="datanascimento" required datetimepicker autocomplete="off" placeholder="Data de Nascimento" [(ngModel)]="vm.model.datanascimento">
             </div>
             <div class="form-group col-md-12">
-              <input type="password" class="form-control" placeholder="Senha">
+              <input type="password" class="form-control" name="senhaAluno" required placeholder="Senha" [(ngModel)]="vm.model.senhaAluno">
             </div>
             <div class="form-group col-md-12">
-              <input type="email" class="form-control" required aria-describedby="emailHelp" placeholder="Seu email">
+              <input type="email" class="form-control" name="email" required aria-describedby="emailHelp" placeholder="Seu email" [(ngModel)]="vm.model.email">
+            </div>
+
+            <h4 class="form-group col-md-12">Endereco</h4>
+
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required name="Endereço" placeholder="Endereço" [(ngModel)]="vm.model.endereco">
             </div>
             <div class="form-group col-md-12">
-              <label for="exampleFormControlFile1">Anexe uma foto ao seu cadastro</label>
-              <input type="file">
+              <input type="text" class="form-control" required name="Bairro" placeholder="Bairro" [(ngModel)]="vm.model.bairro">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required name="Número" placeholder="Número" [(ngModel)]="vm.model.numero">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" required name="CEP" placeholder="CEP" [(ngModel)]="vm.model.cep">
             </div>
           </form>
         </div>
         <footer class="card-footer text-right">
-          <button type="submit" class="btn btn-primary" (click)="nextRegisterStep1()">Próximo</button>
+          <button type="submit" class="btn btn-success" (click)="nextRegisterStep1()">Próximo</button>
         </footer>
       </section>
 
@@ -45,28 +57,56 @@
         <header class="card-header">
           <div class="row align-items-center">
             <div class="col">
-              <strong class="header text-center pt-3">Endereço</strong>
+              <strong class="header text-center pt-3">Cadastre sua Foto</strong>
             </div>
           </div>
         </header>
         <div class="card-body">
           <form class="row">
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" required placeholder="Endereço" [(ngModel)]="vm.model.nomeCompleto">
-            </div>
-            <div class="form-group col-md-12">
-              <input type="text" class="form-control" required placeholder="Bairro" [(ngModel)]="vm.model.nomeCompleto">
-            </div>
-            <div class="form-group col-md-12">
-              <input type="text" class="form-control" required placeholder="Número" [(ngModel)]="vm.model.nomeCompleto">
-            </div>
-            <div class="form-group col-md-12">
-              <input type="text" class="form-control" required placeholder="CEP" [(ngModel)]="vm.model.nomeCompleto">
+              <div style="text-align:center">
+                <label>OBS: A foto cadastrada deve ser tirada estilo 3x4.</label>
+
+                <div class="col-md-12 mt-3 mb-3">
+                  <label>ID do dispositivo utilizado:</label>
+                  <input id="deviceId" type="text" value="{{deviceId}}" class="form-control col-md-12 mt-1" name="deviceId" [(ngModel)]="vm.model.deviceId">
+                  <button type="submit" class="btn btn-primary col-md-6" (click)="showNextWebcam(deviceId)">Ativar Camera</button>
+                </div>
+
+                <div>
+                  <webcam [height]="500" [width]="420" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam"
+                          [allowCameraSwitch]="vm.model.allowCameraSwitch" [switchCamera]="nextWebcamObservable"
+                          [videoOptions]="videoOptions"
+                          [imageQuality]="1"
+                          (cameraSwitched)="cameraWasSwitched($event)"
+                          (initError)="handleInitError($event)"></webcam>
+
+                  <div class="snapshot" *ngIf="webcamImage && !showWebcam">
+                    <h3>Foto Tirada!</h3>
+                    <img [height]="300" [width]="420" [src]="webcamImage.imageAsDataUrl" />
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-md-12">
+                      <button class="btn btn-primary" *ngIf="!webcamImage" (click)="triggerSnapshot();">Tirar Foto</button>
+                      <button class="btn btn-primary" *ngIf="webcamImage" (click)="triggerSnapshotAgain();">Tirar foto novamente</button>
+                      <button class="btn btn-warning" (click)="showNextWebcam(true);" [disabled]="!multipleWebcamsAvailable">Selecionar outra Camera</button>
+                    </div>
+                    <!--<div>
+                      <button class="btn btn-primary" (click)="toggleWebcam();">Mostrar Imagem</button> BOTAO PARA ESCONDER A CAM
+                    </div>-->
+                  </div>
+                </div>
+              </div>
+
+              <h4 *ngIf="errors.length > 0">Erro:</h4>
+              <ul *ngFor="let error of errors">
+                <li>{{error | json}}</li>
+              </ul>
             </div>
           </form>
         </div>
         <footer class="card-footer text-right">
-          <button type="submit" class="btn btn-primary" (click)="nextRegisterStep2()">Próximo</button>
+          <button type="submit" class="btn btn-success" (click)="nextRegisterStep2()">Próximo</button>
         </footer>
       </section>
 
@@ -81,13 +121,13 @@
         <div class="card-body">
           <form class="row">
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" required placeholder="Login" [(ngModel)]="vm.model.nomeCompleto">
+              <input type="text" class="form-control" required name="Login" placeholder="Login" [(ngModel)]="vm.model.login">
             </div>
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" required placeholder="Senha" [(ngModel)]="vm.model.nomeCompleto">
+              <input type="text" class="form-control" required name="Senha" placeholder="Senha" [(ngModel)]="vm.model.senha">
             </div>
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" required placeholder="Confirme sua senha" [(ngModel)]="vm.model.nomeCompleto">
+              <input type="text" class="form-control" required name="confirmesenha" placeholder="Confirme sua senha" [(ngModel)]="vm.model.confirmacaoSenha">
             </div>
           </form>
         </div>
