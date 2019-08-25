@@ -6,6 +6,36 @@
       </span>
     </h1>
   </header>
+
+
+  <!--<input type="text" id='imgInput' value='https://abrilsuperinteressante.files.wordpress.com/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png'>
+  <input type='button' id='btn' value='Analisar'>
+  <img src='' id='img'>
+  <script src='https://unpkg.com/axios/dist/axios.min.js'></script>
+  <script>
+    const btn = document.getElementById('btn')
+    const imgInput = document.getElementById('imgInput')
+    const img = document.getElementById('img')
+
+    const key = '356d2b5126d449a4972de69899f57b2e'
+    const azure = axios.create({
+      baseURL: 'https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze',
+      headers: {
+        'Content-Type': 'application/json',
+        'Ocp-Apim-Subscription-Key': key
+      }
+    })
+
+    imgInput.addEventListener('blur', () => {
+      img.src = imgInput.value
+    })
+
+    btn.addEventListener('click', () => {
+      console.log('processar')
+    })
+  </script>-->
+
+
   <div>
     <div class="text-center mt-5">
 
@@ -68,7 +98,7 @@
                 <label>OBS: A foto cadastrada deve ser tirada estilo 3x4.</label>
 
                 <div class="col-md-12 mt-3 mb-3">
-                  <label>ID do dispositivo utilizado:</label>
+                  <label>ID do dispositivo utilizado</label>
                   <input id="deviceId" type="text" value="{{deviceId}}" class="form-control col-md-12 mt-1" name="deviceId" [(ngModel)]="vm.model.deviceId">
                   <button type="submit" class="btn btn-primary col-md-6" (click)="showNextWebcam(deviceId)">Ativar Camera</button>
                 </div>

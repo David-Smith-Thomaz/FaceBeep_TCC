@@ -11,10 +11,11 @@ namespace Seed.Domain.Entitys
 
         }
 
-		public FotoDoParticipanteBase(int fotodoparticipateid, string descricao) 
+		public FotoDoParticipanteBase(int fotodoparticipateid, string descricao, string arquivo) 
         {
             this.FotoDoParticipateId = fotodoparticipateid;
             this.Descricao = descricao;
+            this.Arquivo = arquivo;
 
         }
 
@@ -24,7 +25,8 @@ namespace Seed.Domain.Entitys
             public virtual FotoDoParticipante GetDefaultInstanceBase(dynamic data, CurrentUser user)
             {
                 var construction = new FotoDoParticipante(data.FotoDoParticipateId,
-                                        data.Descricao);
+                                        data.Descricao,
+                                        data.Arquivo);
 
 
 
@@ -37,6 +39,7 @@ namespace Seed.Domain.Entitys
 
         public virtual int FotoDoParticipateId { get; protected set; }
         public virtual string Descricao { get; protected set; }
+        public virtual string Arquivo { get; protected set; }
 
 
 

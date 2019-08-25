@@ -8,6 +8,7 @@ namespace Seed.Domain.Filter
 
         public virtual int FotoDoParticipateId { get; set;} 
         public virtual string Descricao { get; set;} 
+        public virtual string Arquivo { get; set;} 
         public virtual int? UserAlterId { get; set;} 
         public virtual DateTime? UserAlterDateStart { get; set;} 
         public virtual DateTime? UserAlterDateEnd { get; set;} 
