@@ -12,7 +12,7 @@ namespace Seed.Domain.Entitys
 
         }
 
-        public FotoDoParticipante(int fotodoparticipateid, string descricao) : base(fotodoparticipateid, descricao)
+        public FotoDoParticipante(int fotodoparticipateid, string descricao, string arquivo) : base(fotodoparticipateid, descricao, arquivo)
         {
         }
 
