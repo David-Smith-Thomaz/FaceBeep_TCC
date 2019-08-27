@@ -10,6 +10,27 @@
   <div>
     <div class="text-center mt-5">
 
+      <section class="card" *ngIf="validationPreStep">
+        <header class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <strong class="header text-center pt-3">Autenticacao de codigo</strong>
+            </div>
+          </div>
+        </header>
+        <div class="card-body">
+          <form class="row">
+            <p class="col-md-12">Antes de comecarmos os 3 passos para o cadastro, informe o codigo que o seu professor lhe passou:</p>
+            <div class="col-md-12 text-center jumbotron">
+              <input class="form-control" type="text" placeholder="Digite aqui o codigo de verificacao"/>
+            </div>
+          </form>
+        </div>
+        <footer class="card-footer text-right">
+          <button type="submit" class="btn btn-success" (click)="nextRegisterStepValidationPreStep()()">Verificar</button>
+        </footer>
+      </section>
+
       <section class="card" *ngIf="step1">
         <header class="card-header">
           <div class="row align-items-center">
