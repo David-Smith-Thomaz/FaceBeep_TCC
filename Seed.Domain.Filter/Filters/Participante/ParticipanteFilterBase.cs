@@ -8,6 +8,7 @@ namespace Seed.Domain.Filter
 
         public virtual int ParticipanteId { get; set;} 
         public virtual int UsuarioId { get; set;} 
+        public virtual Guid? CodigoADM { get; set;} 
         public virtual string Apelido { get; set;} 
         public virtual int TipoDeParticipanteId { get; set;} 
         public virtual string NomeCompleto { get; set;} 

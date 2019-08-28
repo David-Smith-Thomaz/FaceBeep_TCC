@@ -16,7 +16,6 @@ namespace Seed.Dto
         public virtual string Descricao {get; set;}
 
         [Required(ErrorMessage="FotoDoParticipante - Campo Arquivo é Obrigatório")]
-        [MaxLength(150, ErrorMessage = "FotoDoParticipante - Quantidade de caracteres maior que o permitido para o campo Arquivo")]
         public virtual string Arquivo {get; set;}
 
 

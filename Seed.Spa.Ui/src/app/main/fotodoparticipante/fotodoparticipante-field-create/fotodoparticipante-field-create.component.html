@@ -9,7 +9,7 @@
   <section class="col-md-12"  >
     <div class='form-group'>
       <label>{{ vm.infos | traduction:'arquivo' }}</label>
-      <input type='text' class='form-control' [(ngModel)]='vm.model.arquivo' name='arquivo' required formControlName='arquivo'    maxlength=150 autocomplete='off'/>
+      <textarea class='form-control'  [(ngModel)]='vm.model.arquivo' name='arquivo' required rows='5' formControlName='arquivo' ></textarea>
     </div>
   </section>
 

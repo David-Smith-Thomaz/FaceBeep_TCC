@@ -31,7 +31,7 @@ export class FotoDoParticipanteServiceFields extends ServiceBase {
 	getInfosFields(moreInfosFields? : any, orderByMore = false) {
 		var defaultInfosFields = {
                     descricao: { label: 'descricao', type: 'string', isKey: false, list:true   },
-                    arquivo: { label: 'arquivo', type: 'string', isKey: false, list:true   },
+                    arquivo: { label: 'arquivo', type: 'string', isKey: false, list:false   },
                     fotoDoParticipateId: { label: 'fotoDoParticipateId', type: 'int', isKey: true, list:false   },
         };
 		return this.mergeInfoFields(defaultInfosFields, moreInfosFields, orderByMore);

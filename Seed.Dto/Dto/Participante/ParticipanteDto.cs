@@ -17,6 +17,10 @@ namespace Seed.Dto
 
         
 
+        public virtual Guid? CodigoADM {get; set;}
+
+        
+
         public virtual string Apelido {get; set;}
 
         

@@ -1,6 +1,12 @@
 ﻿<div class="row">
   <section class="col-md-6">
     <div class='form-group'>
+      <label>{{ vm.infos | traduction:'codigoADM' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.codigoADM' name='codigoADM' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
       <label>{{ vm.infos | traduction:'apelido' }}</label>
       <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.apelido' name='apelido' />
     </div>

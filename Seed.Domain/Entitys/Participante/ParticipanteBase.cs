@@ -42,6 +42,7 @@ namespace Seed.Domain.Entitys
                                         data.Cep,
                                         data.FotoDoParticipanteId);
 
+                construction.SetarCodigoADM(data.CodigoADM);
                 construction.SetarApelido(data.Apelido);
 
 
@@ -54,6 +55,7 @@ namespace Seed.Domain.Entitys
 
         public virtual int ParticipanteId { get; protected set; }
         public virtual int UsuarioId { get; protected set; }
+        public virtual Guid? CodigoADM { get; protected set; }
         public virtual string Apelido { get; protected set; }
         public virtual int TipoDeParticipanteId { get; protected set; }
         public virtual string NomeCompleto { get; protected set; }
@@ -64,6 +66,10 @@ namespace Seed.Domain.Entitys
         public virtual string Cep { get; protected set; }
         public virtual int FotoDoParticipanteId { get; protected set; }
 
+		public virtual void SetarCodigoADM(Guid? codigoadm)
+		{
+			this.CodigoADM = codigoadm;
+		}
 		public virtual void SetarApelido(string apelido)
 		{
 			this.Apelido = apelido;

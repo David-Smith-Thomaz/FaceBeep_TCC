@@ -37,7 +37,7 @@
   <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'admTurmaId'">
     <div class='form-group'>
       <label class='mr-1'>{{ vm.infos | traduction:'admTurmaId' }}</label> 
-        <select class='form-control'  name='admTurmaId' [(ngModel)]='vm.model.admTurmaId' required formControlName='admTurmaId' datasource [dataitem]="'Participante'" [fieldFilterName]="'NomeCompleto'"  ></select>
+        <select class='form-control'  name='admTurmaId' [(ngModel)]='vm.model.admTurmaId' required formControlName='admTurmaId' datasource [dataitem]="'Participante'" [fieldFilterName]="'CodigoADM'"  ></select>
       </div>
         
   </section>

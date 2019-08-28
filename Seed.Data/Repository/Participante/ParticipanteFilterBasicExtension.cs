@@ -23,6 +23,11 @@ namespace Seed.Data.Repository
 				
 				queryFilter = queryFilter.Where(_=>_.UsuarioId == filters.UsuarioId);
 			}
+            if (filters.CodigoADM.IsSent()) 
+			{ 
+				
+				queryFilter = queryFilter.Where(_=>_.CodigoADM == filters.CodigoADM);
+			}
             if (filters.Apelido.IsSent()) 
 			{ 
 				
