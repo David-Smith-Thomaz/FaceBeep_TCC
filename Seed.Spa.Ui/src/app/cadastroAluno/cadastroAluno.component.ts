@@ -21,7 +21,9 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
   operationConfimationYes: any;
   changeCultureEmitter: EventEmitter<string>;
 
-  validationPreStep: boolean;
+  choseTypeUser: boolean;
+  validationPreStepAluno: boolean;
+  validationPreStepProfessor: boolean;
   step1: boolean;
   step2: boolean;
   step3: boolean;
@@ -48,7 +50,9 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
     super();
     this.vm = null;
 
-    this.validationPreStep = true;
+    this.choseTypeUser = true
+    this.validationPreStepAluno = false
+    this.validationPreStepProfessor = false
     this.step1 = false
     this.step2 = false
     this.step3 = false
@@ -68,33 +72,56 @@ export class CadastroAlunoComponent extends ComponentBase implements OnInit {
     this.step1 = false
     this.step2 = false
     this.step3 = false
+    this.validationPreStepAluno = false
     this.router.navigate(["/login"]);
   }
 
-  nextRegisterStepValidationPreStep() {
-    this.step1 = true
-    this.step2 = false
-    this.step3 = false
-    this.validationPreStep = false
+  nextRegisterChoseTypeUser(tipoUsuario: any) {
+
+    if (tipoUsuario == 1) //TIPO ALUNO
+    {
+      this.choseTypeUser = false
+      this.validationPreStepAluno = true
+    }
+
+    if (tipoUsuario == 2) //TIPO PROFESSOR
+    {
+      this.choseTypeUser = false
+      this.validationPreStepProfessor = true
+    }
+  }
+
+  nextRegisterStepValidationPreStep(tipoUsuario: any) {
+
+    if (tipoUsuario == 1)
+    {
+      this.step1 = true
+      this.validationPreStepAluno = false
+    }
+
+    if (tipoUsuario == 2) {
+      this.step1 = true
+      this.validationPreStepProfessor = false
+    }
   }
 
   nextRegisterStep1() {
     this.step2 = true
     this.step1 = false
     this.step3 = false
-    this.validationPreStep = false
+    this.validationPreStepAluno = false
   }
   nextRegisterStep2() {
     this.step3 = true
     this.step1 = false
     this.step2 = false
-    this.validationPreStep = false
+    this.validationPreStepAluno = false
   }
   nextRegisterStep3() {
     this.step1 = false
     this.step2 = false
     this.step3 = false
-    this.validationPreStep = true
+    this.validationPreStepAluno = true
   }
 
   public triggerSnapshot(): void {

@@ -2,7 +2,7 @@
   <header class="header text-center pt-3">
     <h1>
       <span>
-        <strong class="header text-center pt-3">Cadastro de Alunos</strong>
+        <strong class="header text-center pt-3">Realizando cadastro</strong>
       </span>
     </h1>
   </header>
@@ -10,7 +10,33 @@
   <div>
     <div class="text-center mt-5">
 
-      <section class="card" *ngIf="validationPreStep">
+      <section class="card" *ngIf="choseTypeUser">
+        <button type="submit" class="btn btn-warning" (click)="nextRegisterChoseTypeUser(1)">Sou Aluno</button>
+        <button type="submit" class="btn btn-primary" (click)="nextRegisterChoseTypeUser(2)">Sou Professor</button>
+      </section>
+
+      <section class="card" *ngIf="validationPreStepProfessor">
+        <header class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <strong class="header text-center pt-3">Autenticacao de codigo</strong>
+            </div>
+          </div>
+        </header>
+        <div class="card-body">
+          <form class="row">
+            <p class="col-md-12">Antes de comecarmos os 3 passos para o cadastro, informe o código fornecido pelo Administrador do sistema</p>
+            <div class="col-md-12 text-center jumbotron">
+              <input class="form-control" type="text" placeholder="Digite aqui o codigo de verificacao" />
+            </div>
+          </form>
+        </div>
+        <footer class="card-footer text-right">
+          <button type="submit" class="btn btn-success" (click)="nextRegisterStepValidationPreStep(2)">Verificar</button>
+        </footer>
+      </section>
+
+      <section class="card" *ngIf="validationPreStepAluno">
         <header class="card-header">
           <div class="row align-items-center">
             <div class="col">
@@ -22,12 +48,12 @@
           <form class="row">
             <p class="col-md-12">Antes de comecarmos os 3 passos para o cadastro, informe o codigo que o seu professor lhe passou:</p>
             <div class="col-md-12 text-center jumbotron">
-              <input class="form-control" type="text" placeholder="Digite aqui o codigo de verificacao"/>
+              <input class="form-control" type="text" placeholder="Digite aqui o codigo de verificacao" />
             </div>
           </form>
         </div>
         <footer class="card-footer text-right">
-          <button type="submit" class="btn btn-success" (click)="nextRegisterStepValidationPreStep()()">Verificar</button>
+          <button type="submit" class="btn btn-success" (click)="nextRegisterStepValidationPreStep(1)">Verificar</button>
         </footer>
       </section>
 
@@ -114,8 +140,8 @@
                       <button class="btn btn-warning" (click)="showNextWebcam(true);" [disabled]="!multipleWebcamsAvailable">Selecionar outra Camera</button>
                     </div>
                     <!--<div>
-                      <button class="btn btn-primary" (click)="toggleWebcam();">Mostrar Imagem</button> BOTAO PARA ESCONDER A CAM
-                    </div>-->
+                  <button class="btn btn-primary" (click)="toggleWebcam();">Mostrar Imagem</button> BOTAO PARA ESCONDER A CAM
+                </div>-->
                   </div>
                 </div>
               </div>
