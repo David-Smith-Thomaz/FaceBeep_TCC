@@ -58,7 +58,7 @@ namespace Seed.CrossCuting
                 new Tool { Icon = "fa fa-edit", Name = "Tipo", Route = "/tipodeusuario", Key = "TipoDeUsuario", ParentKey = "MenuUsuario" , Type = ETypeTools.Menu },
 
                 new Tool { Icon = "fa fa-edit", Name = "Turmas", Key = "MenuTurmaParticipante" , Type = ETypeTools.Menu },
-                new Tool { Icon = "fa fa-edit", Name = "Turma do Participante", Route = "/turmaparticipante", Key = "TurmaParticipante", ParentKey = "MenuTurmaParticipante" , Type = ETypeTools.Menu },
+                new Tool { Icon = "fa fa-edit", Name = "Alocar Aluno", Route = "/turmaparticipante", Key = "TurmaParticipante", ParentKey = "MenuTurmaParticipante" , Type = ETypeTools.Menu },
                 new Tool { Icon = "fa fa-edit", Name = "Config Turma", Route = "/turma", Key = "Turma" , ParentKey = "MenuTurmaParticipante", Type = ETypeTools.Menu },
                 new Tool { Icon = "fa fa-edit", Name = "Status", Route = "/statusdaturma", Key = "StatusDaTurma", ParentKey = "MenuTurmaParticipante" ,Type = ETypeTools.Menu },
 
