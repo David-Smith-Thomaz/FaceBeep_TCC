@@ -1,0 +1,32 @@
+﻿<div class="row">
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'codigo' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.codigo' name='codigo' />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'dataInicio' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.dataInicio' name='dataInicio'datepicker />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'dataFim' }}</label>
+      <input type='text' class='form-control'  [(ngModel)]='vm.modelFilter.dataFim' name='dataFim'datepicker />
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'participanteId'}}</label>
+      <select class='form-control'  name='participanteId' [(ngModel)]='vm.modelFilter.participanteId' datasource [dataitem]="'Participante'" [fieldFilterName]="'NomeCompleto'"></select>
+    </div>
+  </section>
+  <section class="col-md-6">
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'statusCodigoId'}}</label>
+      <select class='form-control'  name='statusCodigoId' [(ngModel)]='vm.modelFilter.statusCodigoId' datasource [dataitem]="'StatusCodigo'" [fieldFilterName]="'Description'"></select>
+    </div>
+  </section>
+</div>

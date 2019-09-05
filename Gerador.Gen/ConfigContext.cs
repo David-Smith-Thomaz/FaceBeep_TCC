@@ -51,6 +51,8 @@ namespace Seed.Gen
                 
                 TableInfo = new UniqueListTableInfo
                 {
+                   new TableInfo().FromTable("StatusCodigo").MakeBack().MakeFront(),
+                   new TableInfo().FromTable("CodigoVerificacao").MakeBack().MakeFront(),
                    new TableInfo().FromTable("StatusDoUsuario").MakeBack().MakeFront(),
                    new TableInfo().FromTable("Usuario").MakeBack().MakeFront(),
                    new TableInfo().FromTable("TipoDeUsuario").MakeBack().MakeFront(),

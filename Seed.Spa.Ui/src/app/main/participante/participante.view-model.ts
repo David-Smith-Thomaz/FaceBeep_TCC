@@ -1,5 +1,4 @@
 ﻿export class Participante {
-    codigoADM : string;
     apelido : string;
     nomeCompleto : string;
     endereco : string;

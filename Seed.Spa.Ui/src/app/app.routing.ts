@@ -9,6 +9,10 @@ const APP_ROUTES_DEFAULT: Routes = [
     {
         path: '', component: MainComponent, data : { title : "Main" }, children: [
 
+            { path: 'statuscodigo',  canActivate: [AuthGuard], loadChildren: './main/statuscodigo/statuscodigo.module#StatusCodigoModule' },
+
+            { path: 'codigoverificacao',  canActivate: [AuthGuard], loadChildren: './main/codigoverificacao/codigoverificacao.module#CodigoVerificacaoModule' },
+
             { path: 'statusdousuario',  canActivate: [AuthGuard], loadChildren: './main/statusdousuario/statusdousuario.module#StatusDoUsuarioModule' },
 
             { path: 'usuario',  canActivate: [AuthGuard], loadChildren: './main/usuario/usuario.module#UsuarioModule' },
@@ -31,6 +35,10 @@ const APP_ROUTES_DEFAULT: Routes = [
 
             ]
     },
+
+    { path: 'statuscodigo/print/:id', canActivate: [AuthGuard], loadChildren: './main/statuscodigo/statuscodigo-print/statuscodigo-print.module#StatusCodigoPrintModule' },
+
+    { path: 'codigoverificacao/print/:id', canActivate: [AuthGuard], loadChildren: './main/codigoverificacao/codigoverificacao-print/codigoverificacao-print.module#CodigoVerificacaoPrintModule' },
 
     { path: 'statusdousuario/print/:id', canActivate: [AuthGuard], loadChildren: './main/statusdousuario/statusdousuario-print/statusdousuario-print.module#StatusDoUsuarioPrintModule' },
 

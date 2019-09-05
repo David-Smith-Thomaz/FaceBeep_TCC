@@ -23,10 +23,13 @@ namespace IdentityServer4.Quickstart.UI
                     context.HttpContext.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
                 }
 
-                var csp = "default-src 'self';";
+                //var csp = "default-src 'self';";
                 // an example if you need client images to be displayed from twitter
                 //var csp = "default-src 'self'; img-src 'self' https://pbs.twimg.com";
-                
+
+                var csp = $"default-src 'self';img-src 'self' *;style-src 'self' 'unsafe-inline';";
+                csp += "script-src  https://www.google.com/ https://www.gstatic.com/ https://score-platform-sso.azurewebsites.net/js/util.js 'self' 'unsafe-inline';  frame-src https://www.google.com/";
+
                 // once for standards compliant browsers
                 if (!context.HttpContext.Response.Headers.ContainsKey("Content-Security-Policy"))
                 {

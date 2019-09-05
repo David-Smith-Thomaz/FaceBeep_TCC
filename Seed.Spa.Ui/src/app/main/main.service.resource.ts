@@ -15,7 +15,9 @@ export class MainServiceResource extends ServiceBase {
 
   getInfosResources() {
     return {
-            StatusDoUsuario: { label: 'StatusDoUsuario' },
+            StatusCodigo: { label: 'StatusCodigo' },
+      CodigoVerificacao: { label: 'CodigoVerificacao' },
+      StatusDoUsuario: { label: 'StatusDoUsuario' },
       Usuario: { label: 'Usuario' },
       TipoDeUsuario: { label: 'TipoDeUsuario' },
       Participante: { label: 'Participante' },

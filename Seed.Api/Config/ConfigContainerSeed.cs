@@ -20,6 +20,14 @@ namespace Seed.Api
             services.AddScoped<ICache, RedisComponent>();
             services.AddScoped<IUnitOfWork, UnitOfWork<DbContextSeed>>();
             
+			services.AddScoped<IStatusCodigoApplicationService, StatusCodigoApplicationService>();
+			services.AddScoped<IStatusCodigoService, StatusCodigoService>();
+			services.AddScoped<IStatusCodigoRepository, StatusCodigoRepository>();
+
+			services.AddScoped<ICodigoVerificacaoApplicationService, CodigoVerificacaoApplicationService>();
+			services.AddScoped<ICodigoVerificacaoService, CodigoVerificacaoService>();
+			services.AddScoped<ICodigoVerificacaoRepository, CodigoVerificacaoRepository>();
+
 			services.AddScoped<IStatusDoUsuarioApplicationService, StatusDoUsuarioApplicationService>();
 			services.AddScoped<IStatusDoUsuarioService, StatusDoUsuarioService>();
 			services.AddScoped<IStatusDoUsuarioRepository, StatusDoUsuarioRepository>();

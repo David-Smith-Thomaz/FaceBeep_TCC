@@ -1,0 +1,40 @@
+﻿<div class="row " [formGroup]="vm.form">
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'codigo' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.codigo' name='codigo' required formControlName='codigo'    autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'dataInicio' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.dataInicio' name='dataInicio' required formControlName='dataInicio' datetimepicker autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"  >
+    <div class='form-group'>
+      <label>{{ vm.infos | traduction:'dataFim' }}</label>
+      <input type='text' class='form-control' [(ngModel)]='vm.model.dataFim' name='dataFim' required formControlName='dataFim' datetimepicker autocomplete='off'/>
+    </div>
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'participanteId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'participanteId' }}</label> 
+        <select class='form-control'  name='participanteId' [(ngModel)]='vm.model.participanteId' required formControlName='participanteId' datasource [dataitem]="'Participante'" [fieldFilterName]="'NomeCompleto'"  ></select>
+      </div>
+        
+  </section>
+
+  <section class="col-md-12"   *ngIf="!vm.isParent || vm.ParentIdField != 'statusCodigoId'">
+    <div class='form-group'>
+      <label class='mr-1'>{{ vm.infos | traduction:'statusCodigoId' }}</label> 
+        <select class='form-control'  name='statusCodigoId' [(ngModel)]='vm.model.statusCodigoId' required formControlName='statusCodigoId' datasource [dataitem]="'StatusCodigo'" [fieldFilterName]="'Description'"  ></select>
+      </div>
+        
+  </section>
+
+</div>
+

@@ -1,0 +1,26 @@
+﻿<dl>
+    <dt>{{ vm.infos | traduction: 'codigo' }}:</dt>
+    <dd><bind-custom [model]="vm.details.codigo" [format]="'Guid'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'dataInicio' }}:</dt>
+    <dd><bind-custom [model]="vm.details.dataInicio" [format]="'DateTime'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'dataFim' }}:</dt>
+    <dd><bind-custom [model]="vm.details.dataFim" [format]="'DateTime'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'codigoVerificacaoId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.codigoVerificacaoId" [format]="'int'" [tag]="'span'" ></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'participanteId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.participanteId" [format]="'instance'" [tag]="'span'"  [instance]="'Participante'"  [key]="'ParticipanteId'"></bind-custom></dd>
+ 
+
+    <dt>{{ vm.infos | traduction: 'statusCodigoId' }}:</dt>
+    <dd><bind-custom [model]="vm.details.statusCodigoId" [format]="'instance'" [tag]="'span'"  [instance]="'StatusCodigo'"  [key]="'statusCodigoId'"></bind-custom></dd>
+ 
+
+</dl> 

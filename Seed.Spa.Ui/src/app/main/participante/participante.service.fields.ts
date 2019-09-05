@@ -17,7 +17,6 @@ export class ParticipanteServiceFields extends ServiceBase {
 
 	getFormControls(moreFormControls? : any) {
 		var formControls = Object.assign({
-            codigoADM : new FormControl(),
             apelido : new FormControl(),
             nomeCompleto : new FormControl(),
             endereco : new FormControl(),
@@ -39,7 +38,6 @@ export class ParticipanteServiceFields extends ServiceBase {
 
 	getInfosFields(moreInfosFields? : any, orderByMore = false) {
 		var defaultInfosFields = {
-                    codigoADM: { label: 'codigoADM', type: 'Guid?', isKey: false, list:true   },
                     apelido: { label: 'apelido', type: 'string', isKey: false, list:true   },
                     nomeCompleto: { label: 'nomeCompleto', type: 'string', isKey: false, list:true   },
                     endereco: { label: 'endereco', type: 'string', isKey: false, list:true   },

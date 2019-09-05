@@ -8,6 +8,16 @@ namespace Seed.Application.Config
 
         public DominioToDtoProfileSeed()
         {
+            CreateMap(typeof(StatusCodigo), typeof(StatusCodigoDto)).ReverseMap();
+            CreateMap(typeof(StatusCodigo), typeof(StatusCodigoDtoSpecialized));
+            CreateMap(typeof(StatusCodigo), typeof(StatusCodigoDtoSpecializedResult));
+            CreateMap(typeof(StatusCodigo), typeof(StatusCodigoDtoSpecializedReport));
+            CreateMap(typeof(StatusCodigo), typeof(StatusCodigoDtoSpecializedDetails));
+            CreateMap(typeof(CodigoVerificacao), typeof(CodigoVerificacaoDto)).ReverseMap();
+            CreateMap(typeof(CodigoVerificacao), typeof(CodigoVerificacaoDtoSpecialized));
+            CreateMap(typeof(CodigoVerificacao), typeof(CodigoVerificacaoDtoSpecializedResult));
+            CreateMap(typeof(CodigoVerificacao), typeof(CodigoVerificacaoDtoSpecializedReport));
+            CreateMap(typeof(CodigoVerificacao), typeof(CodigoVerificacaoDtoSpecializedDetails));
             CreateMap(typeof(StatusDoUsuario), typeof(StatusDoUsuarioDto)).ReverseMap();
             CreateMap(typeof(StatusDoUsuario), typeof(StatusDoUsuarioDtoSpecialized));
             CreateMap(typeof(StatusDoUsuario), typeof(StatusDoUsuarioDtoSpecializedResult));

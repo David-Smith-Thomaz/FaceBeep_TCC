@@ -17,6 +17,8 @@ namespace Seed.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            new StatusCodigoMap(modelBuilder.Entity<StatusCodigo>());
+            new CodigoVerificacaoMap(modelBuilder.Entity<CodigoVerificacao>());
             new StatusDoUsuarioMap(modelBuilder.Entity<StatusDoUsuario>());
             new UsuarioMap(modelBuilder.Entity<Usuario>());
             new TipoDeUsuarioMap(modelBuilder.Entity<TipoDeUsuario>());
