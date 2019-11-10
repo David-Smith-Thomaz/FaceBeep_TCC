@@ -57,6 +57,9 @@
                 <div class="text-center">
                     <button class="btn btn-success text-center">Logar utilizando reconhecimento Facial</button>
                 </div>
+                <div id="container">
+                    <video autoplay="autoplay" id="videoElement"></video>
+                </div>
             </div>
 
             <div class="col-md-4"> </div>
@@ -97,3 +100,32 @@
         }
     </div>
 </div>
+
+<style>
+    #container {
+        margin: 0px auto;
+        width: 500px;
+        height: 375px;
+        border: 10px #333 solid;
+    }
+
+    #videoElement {
+        width: 500px;
+        height: 375px;
+        background-color: #666;
+    }
+</style>
+
+<script>
+    var video = document.querySelector("#videoElement");
+
+    if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                video.srcObject = stream;
+            })
+            .catch(function (err0r) {
+                console.log("Something went wrong!");
+            });
+    }
+</script>
