@@ -18,6 +18,13 @@
     #formLogin {
         display: block;
     }
+
+    #buttomRecognitionLogin {
+        width: 500px;
+    }
+    #buttomRecover {
+        display: none;
+    }
 </style>
 
 <div class="login-page">
@@ -53,14 +60,14 @@
                                 </div>
 
                                 @*@if (Model.AllowRememberLogin)
-                                {
-                                    <div class="form-group login-remember">
-                                        <label asp-for="RememberLogin">
-                                            <input asp-for="RememberLogin">
-                                            <strong>Remember My Login</strong>
-                                        </label>
-                                    </div>
-                                }*@
+                                    {
+                                        <div class="form-group login-remember">
+                                            <label asp-for="RememberLogin">
+                                                <input asp-for="RememberLogin">
+                                                <strong>Remember My Login</strong>
+                                            </label>
+                                        </div>
+                                    }*@
                                 <div class="row">
                                     <small class="col-md-6 text-left"><a asp-action="ForgottenPassword"><b>Esqueci minha senha</b></a></small>
                                     <small class="col-md-6 text-right"><a href="http://localhost:4200/cadastroAluno"><b>Quero me cadastrar</b></a></small>
@@ -81,38 +88,49 @@
                 </div>
             </div>
 
-            <div id="containerVideo">
-                <video autoplay="autoplay" id="videoElement"></video>
-            </div>
+            <div>
+                <div id="LoginRecognition" class="text-right">
+                    <button id="buttomRecover" onclick="showVideo('containerVideo')" class="btn btn-primary text-right">Voltar</button>
+                </div>
+                <div><p>   </p></div>
+                <div id="containerVideo">
+                    <video autoplay="autoplay" id="videoElement"></video>
+                    <h4 class="text-center"> </h4>
 
-            <div class="col-md-4"> </div>
+                    <div id="LoginRecognition" class="text-left">
+                        <button id="buttomRecognitionLogin" class="btn btn-success text-center">Logar</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4"> </div>
+            </div>
         }
 
         @*@if (Model.VisibleExternalProviders.Any())
-        {
-            <div class="col-md-6 col-sm-6 external-providers">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">External Login</h3>
-                    </div>
-                    <div class="panel-body">
-                        <ul class="list-inline">
-                            @foreach (var provider in Model.VisibleExternalProviders)
-                            {
-                                <li>
-                                    <a class="btn btn-default"
-                                       asp-action="ExternalLogin"
-                                       asp-route-provider="@provider.AuthenticationScheme"
-                                       asp-route-returnUrl="@Model.ReturnUrl">
-                                        @provider.DisplayName
-                                    </a>
-                                </li>
-                            }
-                        </ul>
+            {
+                <div class="col-md-6 col-sm-6 external-providers">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">External Login</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-inline">
+                                @foreach (var provider in Model.VisibleExternalProviders)
+                                {
+                                    <li>
+                                        <a class="btn btn-default"
+                                           asp-action="ExternalLogin"
+                                           asp-route-provider="@provider.AuthenticationScheme"
+                                           asp-route-returnUrl="@Model.ReturnUrl">
+                                            @provider.DisplayName
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }*@
+            }*@
 
         @if (!Model.EnableLocalLogin && !Model.VisibleExternalProviders.Any())
         {
@@ -127,6 +145,9 @@
 
 <script>
     var video = document.querySelector("#videoElement");
+    var buttomRecognition = document.getElementById("buttomRecognition")
+    var formLogin = document.getElementById("formLogin")
+    var containerVideo = document.getElementById("containerVideo")
 
     if (navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({ video: true })
@@ -136,10 +157,6 @@
             .catch(function (err0r) {
             });
     }
-
-    var buttomRecognition = document.getElementById("buttomRecognition")
-    var formLogin = document.getElementById("formLogin")
-    var containerVideo = document.getElementById("containerVideo")
 
     function showVideo(el) {
         var display = document.getElementById(el).style.display;
@@ -151,10 +168,12 @@
         if (display == "none") {
             document.getElementById(el).style.display = 'block';
             document.getElementById('formLogin').style.display = 'none';
+            document.getElementById('buttomRecover').style.display = 'block';
         }
         else {
             document.getElementById(el).style.display = 'none';
             document.getElementById('formLogin').style.display = 'block';
+            document.getElementById('buttomRecover').style.display = 'none';
         }
     }
 
