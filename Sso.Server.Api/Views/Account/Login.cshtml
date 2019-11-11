@@ -1,5 +1,25 @@
 ﻿@model LoginViewModel
 
+<style>
+    #containerVideo {
+        margin: 0px auto;
+        width: 520px;
+        height: 395px;
+        border: 10px #333 solid;
+        display: none;
+    }
+
+    #videoElement {
+        width: 500px;
+        height: 375px;
+        background-color: #666;
+    }
+
+    #formLogin {
+        display: block;
+    }
+</style>
+
 <div class="login-page">
     <div class="page-header text-center">
         <img src="~/logo.png" height="90" width="300">
@@ -12,7 +32,7 @@
         @if (Model.EnableLocalLogin)
         {
             <div class="col-md-4"> </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="formLogin">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title text-center">Seja muito bem vindo!</h3>
@@ -33,14 +53,14 @@
                                 </div>
 
                                 @*@if (Model.AllowRememberLogin)
-                        {
-                            <div class="form-group login-remember">
-                                <label asp-for="RememberLogin">
-                                    <input asp-for="RememberLogin">
-                                    <strong>Remember My Login</strong>
-                                </label>
-                            </div>
-                        }*@
+                                {
+                                    <div class="form-group login-remember">
+                                        <label asp-for="RememberLogin">
+                                            <input asp-for="RememberLogin">
+                                            <strong>Remember My Login</strong>
+                                        </label>
+                                    </div>
+                                }*@
                                 <div class="row">
                                     <small class="col-md-6 text-left"><a asp-action="ForgottenPassword"><b>Esqueci minha senha</b></a></small>
                                     <small class="col-md-6 text-right"><a href="http://localhost:4200/cadastroAluno"><b>Quero me cadastrar</b></a></small>
@@ -53,43 +73,46 @@
                         </form>
                     </div>
                 </div>
+
                 <h4 class="text-center">Ou</h4>
+
                 <div class="text-center">
-                    <button class="btn btn-success text-center">Logar utilizando reconhecimento Facial</button>
+                    <button id="buttomRecognition" onclick="showVideo('containerVideo')" class="btn btn-success text-center">Logar utilizando reconhecimento Facial</button>
                 </div>
-                <div id="container">
-                    <video autoplay="autoplay" id="videoElement"></video>
-                </div>
+            </div>
+
+            <div id="containerVideo">
+                <video autoplay="autoplay" id="videoElement"></video>
             </div>
 
             <div class="col-md-4"> </div>
         }
 
         @*@if (Model.VisibleExternalProviders.Any())
-            {
-                <div class="col-md-6 col-sm-6 external-providers">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">External Login</h3>
-                        </div>
-                        <div class="panel-body">
-                            <ul class="list-inline">
-                                @foreach (var provider in Model.VisibleExternalProviders)
-                                {
-                                    <li>
-                                        <a class="btn btn-default"
-                                           asp-action="ExternalLogin"
-                                           asp-route-provider="@provider.AuthenticationScheme"
-                                           asp-route-returnUrl="@Model.ReturnUrl">
-                                            @provider.DisplayName
-                                        </a>
-                                    </li>
-                                }
-                            </ul>
-                        </div>
+        {
+            <div class="col-md-6 col-sm-6 external-providers">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">External Login</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-inline">
+                            @foreach (var provider in Model.VisibleExternalProviders)
+                            {
+                                <li>
+                                    <a class="btn btn-default"
+                                       asp-action="ExternalLogin"
+                                       asp-route-provider="@provider.AuthenticationScheme"
+                                       asp-route-returnUrl="@Model.ReturnUrl">
+                                        @provider.DisplayName
+                                    </a>
+                                </li>
+                            }
+                        </ul>
                     </div>
                 </div>
-            }*@
+            </div>
+        }*@
 
         @if (!Model.EnableLocalLogin && !Model.VisibleExternalProviders.Any())
         {
@@ -101,20 +124,6 @@
     </div>
 </div>
 
-<style>
-    #container {
-        margin: 0px auto;
-        width: 500px;
-        height: 375px;
-        border: 10px #333 solid;
-    }
-
-    #videoElement {
-        width: 500px;
-        height: 375px;
-        background-color: #666;
-    }
-</style>
 
 <script>
     var video = document.querySelector("#videoElement");
@@ -125,7 +134,49 @@
                 video.srcObject = stream;
             })
             .catch(function (err0r) {
-                console.log("Something went wrong!");
             });
+    }
+
+    var buttomRecognition = document.getElementById("buttomRecognition")
+    var formLogin = document.getElementById("formLogin")
+    var containerVideo = document.getElementById("containerVideo")
+
+    function showVideo(el) {
+        var display = document.getElementById(el).style.display;
+
+        if (!display) {
+            display = 'none'
+        }
+
+        if (display == "none") {
+            document.getElementById(el).style.display = 'block';
+            document.getElementById('formLogin').style.display = 'none';
+        }
+        else {
+            document.getElementById(el).style.display = 'none';
+            document.getElementById('formLogin').style.display = 'block';
+        }
+    }
+
+    function addClass(id, classe) {
+        var elemento = document.getElementById(id);
+        var classes = elemento.className.split(' ');
+        var getIndex = classes.indexOf(classe);
+
+        if (getIndex === -1) {
+            classes.push(classe);
+            elemento.className = classes.join(' ');
+        }
+    }
+
+    function delClass(id, classe) {
+        var elemento = document.getElementById(id);
+        var classes = elemento.className.split(' ');
+        var getIndex = classes.indexOf(classe);
+
+        if (getIndex > -1) {
+            classes.splice(getIndex, 1);
+        }
+        elemento.className = classes.join(' ');
     }
 </script>
