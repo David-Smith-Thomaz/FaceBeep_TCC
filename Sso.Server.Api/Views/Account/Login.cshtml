@@ -9,12 +9,6 @@
         display: none;
     }
 
-    #videoElement {
-        width: 500px;
-        height: 375px;
-        background-color: #666;
-    }
-
     #formLogin {
         display: block;
     }
@@ -22,8 +16,17 @@
     #buttomRecognitionLogin {
         width: 500px;
     }
+
     #buttomRecover {
         display: none;
+    }
+
+    video,
+    canvas {
+        left: 518px;
+        top: 279px;
+        z-index: 1;
+        position: absolute;
     }
 </style>
 
@@ -94,8 +97,30 @@
                 </div>
                 <div><p>   </p></div>
                 <div id="containerVideo">
-                    <video autoplay="autoplay" id="videoElement"></video>
+                    <div>
+                        <video width="500" height="375" autoplay="autoplay" id="videoElement"></video>
+                        <canvas width="500" height="375" id="canvas"></canvas>
+                    </div>
                     <h4 class="text-center"> </h4>
+
+                    <div>
+                        <script src="~/js/tracking-min.js"></script>
+                        <script src="~/js/face-min.js"></script>
+                    </div>
+
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> IIII </h4>
+                    <h4 class="text-center"> ---- </h4>
 
                     <div id="LoginRecognition" class="text-left">
                         <button id="buttomRecognitionLogin" class="btn btn-success text-center">Logar</button>
@@ -149,23 +174,40 @@
     var formLogin = document.getElementById("formLogin")
     var containerVideo = document.getElementById("containerVideo")
 
-    if (navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then(function (stream) {
-                video.srcObject = stream;
-            })
-            .catch(function (err0r) {
-            });
-    }
-
     function showVideo(el) {
         var display = document.getElementById(el).style.display;
+
+        //if (navigator.mediaDevices.getUserMedia) {
+        //    navigator.mediaDevices.getUserMedia({ video: true })
+        //        .then(function (stream) {
+        //            video.srcObject = stream;
+        //        })
+        //        .catch(function (err0r) {
+        //        });
+        //}
+
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        var tracker = new tracking.ObjectTracker("face");
+
 
         if (!display) {
             display = 'none'
         }
 
         if (display == "none") {
+            tracking.track("#videoElement", tracker, { camera: true });
+            tracker.on("track", event => {
+
+                context.clearRect(0, 0, canvas.width, canvas.height);
+
+                event.data.forEach(rect => {
+                    context.strokeStyle = 'red';
+                    context.strokeRect(rect.x, rect.y, rect.width, rect.height);
+                    context.fillStyle = 'red';
+                });
+            });
+
             document.getElementById(el).style.display = 'block';
             document.getElementById('formLogin').style.display = 'none';
             document.getElementById('buttomRecover').style.display = 'block';
