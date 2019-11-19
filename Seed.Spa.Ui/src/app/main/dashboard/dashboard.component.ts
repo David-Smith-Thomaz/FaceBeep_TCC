@@ -17,6 +17,7 @@ export class DashBoardComponent implements OnInit {
 
   vm: ViewModel<any>;
 
+
   operationConfimationYes: any;
   changeCultureEmitter: EventEmitter<string>;
 

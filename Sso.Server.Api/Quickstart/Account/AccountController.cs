@@ -93,11 +93,17 @@ namespace IdentityServer4.Quickstart.UI
             var ReturnUrl = HelperUrl.GetRedirectUrl(model.ReturnUrl);
             var clientId = HelperUrl.GetClientId(model.ReturnUrl);
 
+            var userNameTest = "adm";
+            var passwordTest = "123456";
 
-            if (ModelState.IsValid)
-            {
+            model.Username = userNameTest;
+            model.Password = passwordTest;
+
+            //if (ModelState.IsValid)
+            //{
                 model.RememberLogin = true;
                 // validate username/password against in-memory store
+
                 var user = await _usersServices.Auth(model.Username, model.Password);
 
                 if (user.IsNull())
@@ -164,7 +170,7 @@ namespace IdentityServer4.Quickstart.UI
                     }
                 }
 
-            }
+            //}
 
             // something went wrong, show form with error
             var vm = await BuildLoginViewModelAsync(model);

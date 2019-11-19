@@ -1,15 +1,37 @@
-<div class="container mt-5">
-  <header class="header text-center pt-3">
+<div>
+<!--<header class="header text-center pt-3">
     <h1>
       <span>
         <strong>DashBoard</strong>
       </span>
     </h1>
-  </header>
-  <div>
-    <div class="text-center jumbotron">
-      <h2 class="display-3">Em breve</h2>
-      <p>mais informações</p>
+  </header>-->
+  <div class="p-3">
+    <div class="group-selector">
+      <select id="group-select" class="group-select" onchange="getGroups()">
+        <option value="0">Turma 1</option>
+        <option value="1">Turma 2</option>
+        <option value="2">Turma 3</option>
+      </select>
+      <button class="start-button">Iniciar aula</button>
+    </div>
+    <div class="dashboard-list">
+      <ul class="base-list tochecklist">
+        <h3>Aguardando</h3>
+        <li>David Thomaz</li>
+        <li>Thiago Martins</li>
+        <li>Mateus Silva</li>
+      </ul>
+      <ul class="base-list checkedlist">
+        <h3>Presença capturada</h3>
+        <li>Rafael Pilon &nbsp;&nbsp; <span>18-11-2019 20:41</span></li>
+      </ul>
     </div>
   </div>
 </div>
+
+<script>
+  function getGroups() {
+    var
+  }
+</script>
