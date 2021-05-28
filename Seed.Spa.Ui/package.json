@@ -45,7 +45,7 @@
     "select2": "^4.0.6-rc.1",
     "simple-line-icons": "^2.4.1",
     "text-mask-addons": "^3.7.2",
-    "tinymce": "^4.7.13",
+    "tinymce": "^5.7.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
